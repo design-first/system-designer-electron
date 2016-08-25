@@ -10,7 +10,7 @@ $ git clone https://github.com/system-sdk/system-designer-electron.git
 $ cd system-designer-electron
 # Install dev dependencies
 $ npm install
-# Run the app
+# Run System Designer
 $ npm run start
 ```
 
