@@ -681,3 +681,21 @@ pre[class*="language-"] {
 #designer-dialog-import-modal-from-library-form {
   display: none;
 }
+#designer-dialog-import-modal-from-systems-form {
+  display: none;
+}
+
+/* Dialog export*/
+#designer-dialog-export-options-sub-system {
+  display: none;
+}
+
+#designer-dialog-export-options-log-level {
+   display: none;
+}
+
+/* Dialog sync */
+
+#designer-dialog-sync-options-log-level {
+  display: none;
+}
