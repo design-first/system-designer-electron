@@ -1,7 +1,7 @@
 /*
  * System Designer
+ *
  * https://system-designer.github.io
- * @ecarriou
  *
  * Copyright 2016 Erwan Carriou
  *
@@ -396,6 +396,24 @@ body,
     background-color: #E7E7E7;
 }
 
+#designer-spaces-system-items li:hover {
+   background-color: #E7E7E7;
+ }
+ 
+#designer-spaces-system-items > .active {
+    color: #555;
+    background-color: #E7E7E7;
+}
+
+#designer-spaces-components-items li:hover {
+   background-color: #E7E7E7;
+ }
+ 
+#designer-spaces-components-items > .active {
+    color: #555;
+    background-color: #E7E7E7;
+}
+
 /* component */
 
 .placeholder.designer-component > div > .panel-body:hover {
@@ -634,6 +652,18 @@ pre[class*="language-"] {
 /* Sidebar */
 
 .designer-spaces-header {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #E7E7E7;
+}
+
+designer-spaces-system-header {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #E7E7E7;
+}
+
+designer-spaces-components-header {
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 2px solid #E7E7E7;
