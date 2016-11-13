@@ -1,5 +1,5 @@
 /* 
- * System Designer Electron project
+ * System Designer
  * https://system-designer.github.io
  * @ecarriou
  *
@@ -140,15 +140,19 @@ function createWindow() {
             role: 'help',
             submenu: [
                 {
-                    label: 'Documentation',
+                    label: 'Read documentation',
                     click: function () { require('electron').shell.openExternal('https://system-designer.readme.io') }
+                },
+                {
+                    label: 'Ask a question',
+                    click: function () { require('electron').shell.openExternal('https://system-designer.readme.io/discuss') }
                 },
                 {
                     label: 'Report a bug',
                     click: function () { require('electron').shell.openExternal('https://github.com/system-sdk/system-designer/issues') }
                 },
                 {
-                    label: 'Website',
+                    label: 'Go to website',
                     click: function () { require('electron').shell.openExternal('https://system-designer.github.io') }
                 }
             ]
