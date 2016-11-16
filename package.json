@@ -1,7 +1,7 @@
 {
   "name": "system-designer-electron",
   "productName": "System Designer Electron Project",
-  "version": "1.8.4",
+  "version": "1.8.5",
   "description": "System Designer, an IDE for designing applications driven by the model",
   "homepage": "https://system-designer.github.io",
   "author": {
@@ -15,7 +15,7 @@
     "start": "electron main.js"
   },
   "devDependencies": {
-    "electron-packager": "^8.1.0",
-    "electron": "1.4.5"
+    "electron-packager": "^8.2.0",
+    "electron": "^1.4.6"
   }
 }

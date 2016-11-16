@@ -140,7 +140,7 @@ function createWindow() {
             role: 'help',
             submenu: [
                 {
-                    label: 'Read documentation',
+                    label: 'Read the documentation',
                     click: function () { require('electron').shell.openExternal('https://system-designer.readme.io') }
                 },
                 {
@@ -152,7 +152,7 @@ function createWindow() {
                     click: function () { require('electron').shell.openExternal('https://github.com/system-sdk/system-designer/issues') }
                 },
                 {
-                    label: 'Go to website',
+                    label: 'Go to the website',
                     click: function () { require('electron').shell.openExternal('https://system-designer.github.io') }
                 }
             ]
