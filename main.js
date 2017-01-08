@@ -1,9 +1,9 @@
 /* 
  * System Designer
- * https://system-designer.github.io
+ * https://designfirst.io/systemdesigner/
  * @ecarriou
  *
- * Copyright 2016 Erwan Carriou
+ * Copyright 2017 Erwan Carriou
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -149,11 +149,11 @@ function createWindow() {
                 },
                 {
                     label: 'Report a bug',
-                    click: function () { require('electron').shell.openExternal('https://github.com/system-sdk/system-designer/issues') }
+                    click: function () { require('electron').shell.openExternal('https://github.com/design-first/system-designer/issues') }
                 },
                 {
                     label: 'Go to the website',
-                    click: function () { require('electron').shell.openExternal('https://system-designer.github.io') }
+                    click: function () { require('electron').shell.openExternal('https://designfirst.io/systemdesigner/') }
                 }
             ]
         }
