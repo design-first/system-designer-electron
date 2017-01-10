@@ -14,7 +14,7 @@ $ npm install
 $ npm run start
 ```
 
-## Licence
+## License
 
 Copyright 2017 Erwan Carriou
 
