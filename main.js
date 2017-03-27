@@ -1,7 +1,7 @@
 /* 
  * System Designer
- * 
- * https://designfirst.io/systemdesigner/
+ * https://system-designer.github.io
+ * @ecarriou
  *
  * Copyright 2017 Erwan Carriou
  *
@@ -22,6 +22,7 @@
 
 const electron = require('electron');
 const app = electron.app;
+const globalShortcut = electron.globalShortcut;
 const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 
@@ -227,6 +228,14 @@ function createWindow() {
     mainWindow.on('closed', function () {
         mainWindow = null;
     });
+
+    globalShortcut.register('Ctrl+Tab', () => {
+        nextWindow();
+    })
+    
+    globalShortcut.register('Ctrl+Shift+Tab', () => {
+        previousWindow();
+    })
 }
 
 app.on('ready', createWindow);
@@ -242,3 +251,49 @@ app.on('activate', function () {
         createWindow();
     }
 });
+
+function nextWindow() {
+    var windows = BrowserWindow.getAllWindows(),
+        focused = BrowserWindow.getFocusedWindow(),
+        index = 0,
+        lastIndex = 0,
+        nextIndex = 0;
+
+    if (!focused) {
+        return;
+    }
+
+    index = windows.map(win => win.id).indexOf(focused.id);
+    lastIndex = windows.length - 1;
+
+    if (index + 1 > lastIndex) {
+        nextIndex = 0;
+    } else {
+        nextIndex = index + 1;
+    }
+
+    windows[nextIndex].focus();
+}
+
+function previousWindow() {
+    var windows = BrowserWindow.getAllWindows(),
+        focused = BrowserWindow.getFocusedWindow(),
+        index = 0,
+        lastIndex = 0,
+        prevIndex = 0;
+
+    if (!focused) {
+        return;
+    }
+
+    index = windows.map(win => win.id).indexOf(focused.id);
+    lastIndex = windows.length - 1;
+
+    if (index === 0) {
+        prevIndex = lastIndex;
+    } else {
+        prevIndex = index - 1;
+    }
+
+    windows[prevIndex].focus();
+}
