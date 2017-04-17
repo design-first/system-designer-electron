@@ -22,7 +22,6 @@
 
 const electron = require('electron');
 const app = electron.app;
-const globalShortcut = electron.globalShortcut;
 const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 
@@ -121,6 +120,23 @@ function createWindow() {
                     label: 'Close',
                     accelerator: 'CmdOrCtrl+W',
                     role: 'close'
+                },
+                {
+                    type: 'separator'
+                },
+                {
+                    label: 'Next Window',
+                    accelerator: 'Ctrl+Tab',
+                    click: function (item, focusedWindow) {
+                        nextWindow();
+                    }
+                },
+                  {
+                    label: 'Previous Window',
+                    accelerator: 'Ctrl+Shift+Tab',
+                    click: function (item, focusedWindow) {
+                        previousWindow();
+                    }
                 },
                 {
                     type: 'separator'
@@ -228,14 +244,6 @@ function createWindow() {
     mainWindow.on('closed', function () {
         mainWindow = null;
     });
-
-    globalShortcut.register('Ctrl+Tab', () => {
-        nextWindow();
-    })
-    
-    globalShortcut.register('Ctrl+Shift+Tab', () => {
-        previousWindow();
-    })
 }
 
 app.on('ready', createWindow);
@@ -259,20 +267,18 @@ function nextWindow() {
         lastIndex = 0,
         nextIndex = 0;
 
-    if (!focused) {
-        return;
+    if (focused) {
+        index = windows.map(win => win.id).indexOf(focused.id);
+        lastIndex = windows.length - 1;
+
+        if (index + 1 > lastIndex) {
+            nextIndex = 0;
+        } else {
+            nextIndex = index + 1;
+        }
+
+        windows[nextIndex].focus();
     }
-
-    index = windows.map(win => win.id).indexOf(focused.id);
-    lastIndex = windows.length - 1;
-
-    if (index + 1 > lastIndex) {
-        nextIndex = 0;
-    } else {
-        nextIndex = index + 1;
-    }
-
-    windows[nextIndex].focus();
 }
 
 function previousWindow() {
@@ -282,18 +288,16 @@ function previousWindow() {
         lastIndex = 0,
         prevIndex = 0;
 
-    if (!focused) {
-        return;
+    if (focused) {
+        index = windows.map(win => win.id).indexOf(focused.id);
+        lastIndex = windows.length - 1;
+
+        if (index === 0) {
+            prevIndex = lastIndex;
+        } else {
+            prevIndex = index - 1;
+        }
+
+        windows[prevIndex].focus();
     }
-
-    index = windows.map(win => win.id).indexOf(focused.id);
-    lastIndex = windows.length - 1;
-
-    if (index === 0) {
-        prevIndex = lastIndex;
-    } else {
-        prevIndex = index - 1;
-    }
-
-    windows[prevIndex].focus();
 }
