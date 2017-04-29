@@ -65,7 +65,7 @@ function createWindow() {
                     label: 'Select All',
                     accelerator: 'CmdOrCtrl+A',
                     role: 'selectall'
-                },
+                }
             ]
         },
         {
@@ -131,7 +131,7 @@ function createWindow() {
                         nextWindow();
                     }
                 },
-                  {
+                {
                     label: 'Previous Window',
                     accelerator: 'Ctrl+Shift+Tab',
                     click: function (item, focusedWindow) {
