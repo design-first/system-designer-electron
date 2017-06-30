@@ -1,7 +1,7 @@
 {
   "name": "system-designer-electron",
-  "productName": "System Designer Electron Project",
-  "version": "1.9.8",
+  "productName": "System Designer",
+  "version": "1.9.9",
   "description": "System Designer, an IDE for designing JavaScript applications driven by the model",
   "homepage": "https://designfirst.io/systemdesigner/",
   "author": {
@@ -12,10 +12,12 @@
   "main": "main.js",
   "license": "Apache-2.0",
   "scripts": {
-    "start": "electron main.js"
+    "start": "electron main.js",
+    "macOS": "electron-packager ./ --platform=darwin --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.icns --app-copyright \"Copyright © 2017 Erwan Carriou.\" --app-version 1.9.9 --build-version 170630",
+    "windows": "electron-packager ./ --platform=win32 --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.ico --app-copyright \"Copyright © 2017 Erwan Carriou\" --app-version 1.9.9 --build-version 170630 --win32metadata.FileDescription=\"An IDE for designing JavaScript applications driven by the model\" --win32metadata.ProductName=\"System Designer\" --win32metadata.OriginalFilename=\"System Designer.exe\" "
   },
   "devDependencies": {
-    "electron-packager": "8.7.0",
-    "electron": "1.6.10"
+    "electron-packager": "8.7.1",
+    "electron": "1.6.11"
   }
 }

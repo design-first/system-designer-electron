@@ -12,6 +12,10 @@ $ cd system-designer-electron
 $ npm install
 # Run System Designer
 $ npm run start
+# Create macOS application
+$ npm run macOS
+# Create Windows application
+$ npm run windows
 ```
 
 ## License
