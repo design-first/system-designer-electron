@@ -1,23 +1,19 @@
 {
   "name": "system-designer-electron",
   "productName": "System Designer",
-  "version": "1.9.9",
+  "version": "2.0.0-rc.5",
   "description": "System Designer, an IDE for designing JavaScript applications driven by the model",
   "homepage": "https://designfirst.io/systemdesigner/",
-  "author": {
-    "name": "erwan carriou",
-    "email": "erwan.carriou@mac.com",
-    "twitter": "@ecarriou"
-  },
+  "author": "erwan carriou",
   "main": "main.js",
   "license": "Apache-2.0",
   "scripts": {
     "start": "electron main.js",
-    "macOS": "electron-packager ./ --platform=darwin --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.icns --app-copyright \"Copyright © 2017 Erwan Carriou.\" --app-version 1.9.9 --build-version 170630",
-    "windows": "electron-packager ./ --platform=win32 --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.ico --app-copyright \"Copyright © 2017 Erwan Carriou\" --app-version 1.9.9 --build-version 170630 --win32metadata.FileDescription=\"An IDE for designing JavaScript applications driven by the model\" --win32metadata.ProductName=\"System Designer\" --win32metadata.OriginalFilename=\"System Designer.exe\" "
+    "macOS": "electron-packager ./ --platform=darwin --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.icns --app-copyright \"Copyright © 2017 Erwan Carriou.\" --app-version 2.0.0-rc.5 --build-version 170909",
+    "windows": "electron-packager ./ --platform=win32 --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.ico --app-copyright \"Copyright © 2017 Erwan Carriou\" --app-version 2.0.0-rc.5 --build-version 170909 --win32metadata.FileDescription=\"An IDE for designing JavaScript applications driven by the model\" --win32metadata.ProductName=\"System Designer\" --win32metadata.OriginalFilename=\"System Designer.exe\" "
   },
   "devDependencies": {
-    "electron-packager": "8.7.1",
-    "electron": "1.6.11"
+    "electron-packager": "9.0.0",
+    "electron": "1.8.0"
   }
 }
