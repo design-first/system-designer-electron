@@ -1,5 +1,4 @@
-# system-designer-electron
-System Designer for Electron.
+# System Designer for Electron
 
 ## Installation
 
