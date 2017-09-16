@@ -2,18 +2,36 @@
 
 ## Installation
 
+Clone the repository:
+
 ```sh
 # Clone this repository
 $ git clone https://github.com/design-first/system-designer-electron.git
 # Go to the repository
 $ cd system-designer-electron
-# Install dev dependencies
+```
+
+Install dependencies:
+
+```sh
 $ npm install
-# Run System Designer
+```
+
+## Start the application
+
+```sh
 $ npm run start
-# Create macOS application
+```
+
+## Create masOS application
+
+```sh
 $ npm run macOS
-# Create Windows application
+```
+
+## Create Windows application
+
+```sh
 $ npm run windows
 ```
 
