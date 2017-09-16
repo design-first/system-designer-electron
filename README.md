@@ -23,7 +23,7 @@ $ npm install
 $ npm run start
 ```
 
-## Create masOS application
+## Create macOS application
 
 ```sh
 $ npm run macOS
