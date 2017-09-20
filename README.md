@@ -17,19 +17,19 @@ Install dependencies:
 $ npm install
 ```
 
-## Start the application
+## Start System Designer
 
 ```sh
 $ npm run start
 ```
 
-## Create macOS application
+## Create a macOS application
 
 ```sh
 $ npm run macOS
 ```
 
-## Create Windows application
+## Create a Windows application
 
 ```sh
 $ npm run windows
