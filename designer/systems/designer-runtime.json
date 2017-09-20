@@ -397,7 +397,7 @@
 			"state": "$designerSetSystem",
 			"action": "function $designerSetSystem(system) { \n  this.require('logger').level('info');\n\tthis.require('runtime').install(system);\n}",
 			"useCoreAPI": false,
-			"core": false
+			"core": true
 		},
 		"f1c9d810bdf16d0f": {
 			"_id": "f1c9d810bdf16d0f",
