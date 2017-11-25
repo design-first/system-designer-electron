@@ -5,16 +5,13 @@
 Clone the repository:
 
 ```sh
-# Clone this repository
 $ git clone https://github.com/design-first/system-designer-electron.git
-# Go to the repository
-$ cd system-designer-electron
 ```
 
-Install dependencies:
+Install the dependencies:
 
 ```sh
-$ npm install
+$ npm i
 ```
 
 ## Start System Designer
