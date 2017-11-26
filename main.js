@@ -1,7 +1,7 @@
-/* 
+/*
  * System Designer
- * https://system-designer.github.io
- * @ecarriou
+ *
+ * https://designfirst.io/systemdesigner/
  *
  * Copyright 2017 Erwan Carriou
  *
