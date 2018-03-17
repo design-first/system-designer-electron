@@ -1,7 +1,7 @@
 {
   "name": "system-designer-electron",
   "productName": "System Designer",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "System Designer, an IDE for designing systems",
   "homepage": "https://designfirst.io/systemdesigner/",
   "author": "erwan carriou",
@@ -9,11 +9,11 @@
   "license": "Apache-2.0",
   "scripts": {
     "start": "electron main.js",
-    "macOS": "electron-packager ./ --platform=darwin --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.icns --app-copyright \"Copyright © 2018 Erwan Carriou.\" --app-version 2.4.0 --build-version 300002",
-    "windows": "electron-packager ./ --platform=win32 --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.ico --app-copyright \"Copyright © 2018 Erwan Carriou\" --app-version 2.4.0 --build-version 300002 --win32metadata.FileDescription=\"An IDE for designing systems\" --win32metadata.ProductName=\"System Designer\" --win32metadata.OriginalFilename=\"System Designer.exe\" "
+    "macOS": "electron-packager ./ --platform=darwin --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.icns --app-copyright \"Copyright © 2018 Erwan Carriou.\" --app-version 2.5.0 --build-version 300003",
+    "windows": "electron-packager ./ --platform=win32 --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.ico --app-copyright \"Copyright © 2018 Erwan Carriou\" --app-version 2.5.0 --build-version 300003 --win32metadata.FileDescription=\"An IDE for designing systems\" --win32metadata.ProductName=\"System Designer\" --win32metadata.OriginalFilename=\"System Designer.exe\" "
   },
   "devDependencies": {
-    "electron-packager": "11.0.1",
-    "electron": "1.7.12"
+    "electron": "1.8.4",
+    "electron-packager": "11.1.0"
   }
 }

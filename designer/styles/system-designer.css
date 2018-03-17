@@ -309,13 +309,7 @@ body,
 }
 .placeholder {
   padding: 10px;
-  min-width: 300px;
   margin-bottom: 20px;
-}
-@media (max-width: 968px) {
-  .placeholder {
-    min-width: 260px;
-  }
 }
 
 .placeholder img {
@@ -374,7 +368,7 @@ body,
 }
 
 #designer-spaces-system-items li:hover {
-  background-color: #e7e7e7;
+  background-color: hsl(0, 0%, 91%);
 }
 
 #designer-spaces-system-items > .active {
@@ -398,10 +392,11 @@ body,
 .placeholder.designer-component > div > .panel-body {
   max-height: 300px;
   overflow: auto;
-
+  margin-top: 0px;
   padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .placeholder.designer-component > div > .panel-body > .table {
@@ -590,6 +585,9 @@ pre[class*="language-"] {
 .designer-type .list-group-item:hover {
   background-color: #f5f5f5;
 }
+.designer-component tr:hover {
+  background-color: #f5f5f5;
+}
 
 .designer-spaces-header {
   text-align: center;
@@ -717,4 +715,59 @@ designer-spaces-components-header {
   .form-horizontal .radio-inline {
     padding-top: 0px;
   }
+
+  .modal-dialog .form-group label {
+    margin-top: 6px;
+  }
+}
+
+.panel-title {
+  margin-right: 30px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.3 !important;
+}
+
+.panel-body {
+  overflow: auto !important;
+  text-overflow: ellipsis !important;
+}
+
+#designer-spaces-items li a,
+#designer-spaces-system-items li a,
+#designer-spaces-components-items li a {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.panel-help {
+  width: 200px;
+  color: #99999f;
+  border-color: #ccc;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  border-width: 1px;
+}
+
+.panel-help:hover {
+  cursor: pointer;
+}
+
+#designer-spaces-items {
+  overflow: auto;
+  max-height: 300px;
+}
+
+#designer-spaces-components-items {
+  overflow: auto;
+  max-height: 300px;
+}
+
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
 }
