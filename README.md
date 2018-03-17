@@ -1,7 +1,5 @@
 # System Designer for Electron
 
-[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://en.liberapay.com/ecarriou/donate)
-
 ## Installation
 
 Clone the repository:
