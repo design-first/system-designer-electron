@@ -441,3 +441,19 @@ body,
   fill: #888;
   cursor: not-allowed;
 }
+
+.panel {
+  border: 2px solid #7f949d;
+  border-radius: 10px;
+}
+
+.panel-help {
+  width: 200px;
+  color: #99999f;
+  border-color: #ccc;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  border-width: 1px;
+}
