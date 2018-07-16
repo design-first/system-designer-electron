@@ -209,7 +209,15 @@ function createWindow() {
     submenu: [{
       label: 'Read the documentation',
       click: () => {
-        require('electron').shell.openExternal('https://system-designer.readme.io');
+        let helpWindow = new BrowserWindow({
+          width: 800,
+          height: 600
+        });
+        helpWindow.loadURL('file://' + __dirname + '/documentation/docs/what-is-system-designer.html');
+
+        helpWindow.on('closed', () => {
+          helpWindow = null;
+        });
       }
     },
     {
