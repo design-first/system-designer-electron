@@ -13,7 +13,7 @@
     "windows": "electron-packager ./ --platform=win32 --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.ico --app-copyright \"Copyright © 2018 Erwan Carriou\" --app-version 2.9.2 --build-version 301789 --win32metadata.FileDescription=\"An IDE for designing systems\" --win32metadata.ProductName=\"System Designer\" --win32metadata.OriginalFilename=\"System Designer.exe\" "
   },
   "devDependencies": {
-    "electron": "^3.0.0-beta.2",
+    "electron": "^3.0.0-beta.3",
     "electron-packager": "^12.1.0"
   }
 }
