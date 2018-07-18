@@ -223,7 +223,7 @@ function createWindow() {
     {
       label: 'Ask a question',
       click: () => {
-        require('electron').shell.openExternal('https://system-designer.readme.io/discuss');
+        require('electron').shell.openExternal('https://github.com/design-first/system-designer/issues');
       }
     },
     {
