@@ -210,8 +210,8 @@ function createWindow() {
       label: 'Read the documentation',
       click: () => {
         let helpWindow = new BrowserWindow({
-          width: 800,
-          height: 600
+          width: 1024,
+          height: 800
         });
         helpWindow.loadURL('file://' + __dirname + '/documentation/docs/what-is-system-designer.html');
 
