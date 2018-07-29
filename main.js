@@ -211,7 +211,7 @@ function createWindow() {
       click: () => {
         let helpWindow = new BrowserWindow({
           width: 1024,
-          height: 800
+          height: 768
         });
         helpWindow.loadURL('file://' + __dirname + '/documentation/docs/what-is-system-designer.html');
 
