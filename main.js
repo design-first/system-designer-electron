@@ -25,10 +25,6 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 
-// fix an issue with localstorage
-// @see https://github.com/electron/electron/issues/13465
-app.commandLine.appendSwitch('disable-mojo-local-storage');
-
 /**
  * @method nextWindow
  * @description focus on the next window
