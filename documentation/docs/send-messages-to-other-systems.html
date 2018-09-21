@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Send messages to other systems · System Designer</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this tutorial we will show how to send messages from one system to another system with channels."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Send messages to other systems · System Designer"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io../index.html"/><meta property="og:description" content="In this tutorial we will show how to send messages from one system to another system with channels."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="../img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"/><script type="text/javascript" src="../js/links.js"></script><script type="text/javascript" src="../js/clipboard.js"></script><script type="text/javascript" src="../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -20,6 +20,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -27,7 +31,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Send messages to other systems</h1></header><article><div><span><p>In this tutorial we will show how to send messages from one system to another system with channels.</p>
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Send messages to other systems</h1></header><article><div><span><p>In this tutorial we will show how to send messages from one system to another system with channels.</p>
 <blockquote>
 <p>At runtime a <strong>channel</strong> component is defined to send / receive messages between systems</p>
 </blockquote>
@@ -47,7 +51,7 @@
 <li>click on <strong>_Channel</strong> schema to edit it,</li>
 <li>add <strong>somethingHappened</strong> event:</li>
 </ul>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"104ad1f48518376"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"_Channel"</span>,
   <span class="hljs-attr">"_inherit"</span>: [
@@ -61,7 +65,7 @@
 <li>on <strong>Models</strong> tab, click on <strong>_Channel</strong> model (on the right panel under <em>Schemas</em>),</li>
 <li>click on <strong>_Channel</strong> model to edit it</li>
 </ul>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"135c71078810af2"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"_Channel"</span>,
   <span class="hljs-attr">"send"</span>: {
@@ -90,7 +94,7 @@
 <li>on <strong>Behaviors</strong> tab, click on <strong>_Channel</strong> model (on the right panel under <em>Models</em>),</li>
 <li>click on the <strong>send</strong> behavior to edit it,</li>
 </ul>
-<pre><code class="hljs css languages- js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">send</span>(<span class="hljs-params">message</span>) </span>{ 
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">send</span>(<span class="hljs-params">message</span>) </span>{ 
   <span class="hljs-comment">// define here how to send the message to another channel (webRTC, XHR, ...)</span>
   <span class="hljs-comment">// example</span>
   fetch(<span class="hljs-string">'url_to_a_server'</span>, {
@@ -112,7 +116,7 @@
 <li>call the event you have defined, <strong>somethingHappened</strong> and</li>
 <li>pass as parameter a string (as defined in the model).</li>
 </ul>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">this</span>.require(<span class="hljs-string">'channel'</span>).somethingHappened(<span class="hljs-string">'my message'</span>);
+<pre><code class="hljs css language-js"><span class="hljs-keyword">this</span>.require(<span class="hljs-string">'channel'</span>).somethingHappened(<span class="hljs-string">'my message'</span>);
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="listen-to-a-message"></a><a href="#listen-to-a-message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Listen to a message</h2>
 <ul>
@@ -123,7 +127,7 @@
 <li>call the <strong>message</strong> method and</li>
 <li>pass an object that contains the information send by the other system:</li>
 </ul>
-<pre><code class="hljs css languages- js"><span class="hljs-comment">// we suppose that this system runs on a server and</span>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// we suppose that this system runs on a server and</span>
 <span class="hljs-comment">// get the header and body of the request send by the other system</span>
 
 <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'runtime'</span>).message({
@@ -140,7 +144,7 @@
 <li>click on the <strong>somethingHappened</strong> behavior to edit it,</li>
 <li>add this code:</li>
 </ul>
-<pre><code class="hljs css languages- js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">somethingHappened</span>(<span class="hljs-params">param</span>) </span>{ 
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">somethingHappened</span>(<span class="hljs-params">param</span>) </span>{ 
   <span class="hljs-comment">// get logger component</span>
   <span class="hljs-keyword">let</span> logger = <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'logger'</span>);
 
@@ -148,4 +152,4 @@
 }
 </code></pre>
 <p>Now your system is able to listen to an event send by the other system.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../docs/send-messages.html">← Send messages</a><a class="docs-next button" href="../docs/create-an-extension.html">Create an extension →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#define-your-messages">Define your messages</a></li><li><a href="#define-how-to-send-the-message">Define how to send the message</a></li><li><a href="#send-a-message">Send a message</a></li><li><a href="#listen-to-a-message">Listen to a message</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../docs/send-messages.html"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="../docs/create-an-extension.html"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#define-your-messages">Define your messages</a></li><li><a href="#define-how-to-send-the-message">Define how to send the message</a></li><li><a href="#send-a-message">Send a message</a></li><li><a href="#listen-to-a-message">Listen to a message</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>

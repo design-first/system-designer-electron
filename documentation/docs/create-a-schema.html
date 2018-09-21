@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Create a Schema · System Designer</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="A schema helps you to define your model. "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Create a Schema · System Designer"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io../index.html"/><meta property="og:description" content="A schema helps you to define your model. "/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="../img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"/><script type="text/javascript" src="../js/links.js"></script><script type="text/javascript" src="../js/clipboard.js"></script><script type="text/javascript" src="../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -20,6 +20,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -27,7 +31,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Create a Schema</h1></header><article><div><span><p>A schema helps you to define your model.
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Create a Schema</h1></header><article><div><span><p>A schema helps you to define your model.
 A schema generates a model based on very simple informations. You can then edit the generated model.</p>
 <h2><a class="anchor" aria-hidden="true" id="schema-creation"></a><a href="#schema-creation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Schema creation</h2>
 <p>To create a schema in System Designer:</p>
@@ -53,7 +57,7 @@ A schema generates a model based on very simple informations. You can then edit 
 <p><img src="../img/962d821-schema-prop.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="define-inheritance"></a><a href="#define-inheritance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define inheritance</h2>
 <p>To add inheritance between your schemas, you need to add the <strong>_inherit</strong> property to your schemas. This property is an array in which you put all the schemas that this schema must inherit.</p>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"m1da931573d19acc"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
   <span class="hljs-attr">"_inherit"</span>: [
@@ -63,7 +67,7 @@ A schema generates a model based on very simple informations. You can then edit 
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="define-a-property"></a><a href="#define-a-property" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define a property</h2>
 <p>To define a property, add a key that has got a <strong>property</strong> value.</p>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"m1da931573d19acc"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
   <span class="hljs-attr">"name"</span>:<span class="hljs-string">"property"</span>
@@ -71,7 +75,7 @@ A schema generates a model based on very simple informations. You can then edit 
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="define-a-link"></a><a href="#define-a-link" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define a link</h2>
 <p>To define a link between models, add a key that has got a <strong>link</strong> value. A link is a 1-1 link between models.</p>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"m1da931573d19acc"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
   <span class="hljs-attr">"father"</span>:<span class="hljs-string">"link"</span>
@@ -83,7 +87,7 @@ A schema generates a model based on very simple informations. You can then edit 
 <li>a collection of typed objects (example: adresse, ...) or</li>
 <li>a collection of components (i.e. like a 1-N link between models).</li>
 </ul>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"m1da931573d19acc"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
   <span class="hljs-attr">"children"</span>:<span class="hljs-string">"collection"</span>
@@ -91,7 +95,7 @@ A schema generates a model based on very simple informations. You can then edit 
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="define-a-method"></a><a href="#define-a-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define a method</h2>
 <p>To define a method, add a key that has got a <strong>method</strong> value.</p>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"m1da931573d19acc"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
   <span class="hljs-attr">"fullName"</span>:<span class="hljs-string">"method"</span>
@@ -99,7 +103,7 @@ A schema generates a model based on very simple informations. You can then edit 
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="define-an-event"></a><a href="#define-an-event" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define an event</h2>
 <p>To define an event, add a key that has got an <strong>event</strong> value. An event is a asynchronous method.</p>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"m1da931573d19acc"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
   <span class="hljs-attr">"statusChanged"</span>:<span class="hljs-string">"event"</span>
@@ -109,4 +113,4 @@ A schema generates a model based on very simple informations. You can then edit 
 <p><strong>Want to know more?</strong></p>
 <p>For more information on schemas, go to the <a href="https://designfirst.io/systemruntime/documentation/docs/design-your-model.html">System Runtime documentation</a>.</p>
 </blockquote>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../docs/create-a-system.html">← Create a System</a><a class="docs-next button" href="../docs/edit-a-model.html">Edit a model →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#schema-creation">Schema creation</a></li><li><a href="#schema-edition">Schema edition</a></li><li><a href="#define-inheritance">Define inheritance</a></li><li><a href="#define-a-property">Define a property</a></li><li><a href="#define-a-link">Define a link</a></li><li><a href="#define-a-collection">Define a collection</a></li><li><a href="#define-a-method">Define a method</a></li><li><a href="#define-an-event">Define an event</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../docs/create-a-system.html"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="../docs/edit-a-model.html"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#schema-creation">Schema creation</a></li><li><a href="#schema-edition">Schema edition</a></li><li><a href="#define-inheritance">Define inheritance</a></li><li><a href="#define-a-property">Define a property</a></li><li><a href="#define-a-link">Define a link</a></li><li><a href="#define-a-collection">Define a collection</a></li><li><a href="#define-a-method">Define a method</a></li><li><a href="#define-an-event">Define an event</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>

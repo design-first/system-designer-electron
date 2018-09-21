@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Create a Type · System Designer</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Types defined in System Designer can be the used in *type* property of a model."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Create a Type · System Designer"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io../index.html"/><meta property="og:description" content="Types defined in System Designer can be the used in *type* property of a model."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="../img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"/><script type="text/javascript" src="../js/links.js"></script><script type="text/javascript" src="../js/clipboard.js"></script><script type="text/javascript" src="../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -20,6 +20,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -27,7 +31,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Create a Type</h1></header><article><div><span><p>Types defined in System Designer can be the used in <em>type</em> property of a model.</p>
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Create a Type</h1></header><article><div><span><p>Types defined in System Designer can be the used in <em>type</em> property of a model.</p>
 <h2><a class="anchor" aria-hidden="true" id="type-creation"></a><a href="#type-creation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Type creation</h2>
 <p>To create a type in System Designer:</p>
 <ul>
@@ -55,7 +59,7 @@
 <p>You can then use this new type on a model.</p>
 <h2><a class="anchor" aria-hidden="true" id="define-an-enumeration"></a><a href="#define-an-enumeration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define an enumeration</h2>
 <p>To define an enumeration, juste click on the <em>Enumeration</em> checkbox when creating a type. Then set the type of your enumeration (its <em>any</em> by default) and add all the value of your enumeration in the <em>value</em> array.</p>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"g130f01354c1adc4"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"color"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"list of colors"</span>,
@@ -70,7 +74,7 @@
 <p>In the example we have a <em>color</em> enumeration that is a <em>string</em> enumeration that contains <em>blue</em>, <em>red</em> and <em>green</em>.</p>
 <h2><a class="anchor" aria-hidden="true" id="define-an-alias"></a><a href="#define-an-alias" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define an alias</h2>
 <p>To define an alias, just set the <em>type</em> information.</p>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"e1acfa1718b10bf0"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"title"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Title of a movie"</span>,
@@ -80,7 +84,7 @@
 <p>In this example <em>title</em> type is a <em>string</em>.</p>
 <h2><a class="anchor" aria-hidden="true" id="define-a-structure"></a><a href="#define-a-structure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define a structure</h2>
 <p>If you want to define a new type that is a structure, do not click on the <em>Enumeration</em> checkbox when creating a type. Then define the different properties of your structure in <em>schema</em> configuration object.</p>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"z1c72b1a7fd16202"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">"an address"</span>,
@@ -105,7 +109,7 @@
 }
 </code></pre>
 <p>In this example we have defined <em>address</em> type that is composed of a <em>city</em>, <em>zip</em> and <em>street</em> property. This type can be used to define location value in this component:</p>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   "_id":"l15786120601c163",
   "location": {
     "city":"paris",
@@ -116,7 +120,7 @@
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="use-a-new-type-in-the-model"></a><a href="#use-a-new-type-in-the-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use a new type in the model</h2>
 <p>To use the new type in a model, just set the <em>type</em> value with the new created type.</p>
-<pre><code class="hljs css languages- json">{
+<pre><code class="hljs css language-json">{
   <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"d1da7110a801058d"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Person"</span>,
   <span class="hljs-attr">"_description"</span>: <span class="hljs-string">""</span>,
@@ -142,11 +146,11 @@
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="use-a-structured-type-in-the-code"></a><a href="#use-a-structured-type-in-the-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use a structured type in the code</h2>
 <p>If a type is a structure, you can get and set its values very easily.</p>
-<pre><code class="hljs css languages- js"><span class="hljs-comment">// get the city value</span>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// get the city value</span>
 <span class="hljs-keyword">this</span>.location().city();
 
 <span class="hljs-comment">// set the city value</span>
 <span class="hljs-keyword">this</span>.location().city(<span class="hljs-string">'Rennes'</span>);
 </code></pre>
 <p>In this example <em>location</em> has <em>address</em> type. Because it has got a <em>city</em> property, we can get and set its values with APIs.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../docs/create-a-behavior.html">← Create a Behavior</a><a class="docs-next button" href="../docs/create-a-component.html">Create a Component →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#type-creation">Type creation</a></li><li><a href="#type-edition">Type edition</a></li><li><a href="#define-an-enumeration">Define an enumeration</a></li><li><a href="#define-an-alias">Define an alias</a></li><li><a href="#define-a-structure">Define a structure</a></li><li><a href="#use-a-new-type-in-the-model">Use a new type in the model</a></li><li><a href="#use-a-structured-type-in-the-code">Use a structured type in the code</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../docs/create-a-behavior.html"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="../docs/create-a-component.html"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#type-creation">Type creation</a></li><li><a href="#type-edition">Type edition</a></li><li><a href="#define-an-enumeration">Define an enumeration</a></li><li><a href="#define-an-alias">Define an alias</a></li><li><a href="#define-a-structure">Define a structure</a></li><li><a href="#use-a-new-type-in-the-model">Use a new type in the model</a></li><li><a href="#use-a-structured-type-in-the-code">Use a structured type in the code</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>

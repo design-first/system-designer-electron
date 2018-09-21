@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Bundle your JavaScript · System Designer</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this tutorial we will show:"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Bundle your JavaScript · System Designer"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io../index.html"/><meta property="og:description" content="In this tutorial we will show:"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="../img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"/><script type="text/javascript" src="../js/links.js"></script><script type="text/javascript" src="../js/clipboard.js"></script><script type="text/javascript" src="../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100}
           )
@@ -20,6 +20,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -27,7 +31,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Bundle your JavaScript</h1></header><article><div><span><p>In this tutorial we will show:</p>
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Bundle your JavaScript</h1></header><article><div><span><p>In this tutorial we will show:</p>
 <ul>
 <li>how to define a JS model,</li>
 <li>how to create a JS component and</li>
@@ -54,7 +58,7 @@
 <p><img src="../img/4d9886c-js-2.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="code-the-behavior-of-render-method"></a><a href="#code-the-behavior-of-render-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code the behavior of render method</h2>
 <p>Edit the <strong>render</strong> method of the model as follow:</p>
-<pre><code class="hljs css languages- js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">render</span>(<span class="hljs-params"></span>) </span>{
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">render</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">var</span> div = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">'script'</span>);
     
   div.innerHTML = <span class="hljs-keyword">this</span>.source();
@@ -66,7 +70,7 @@
 <p>Now create a <em>JS</em> component from the interface.</p>
 <p><img src="../img/203748c-js-31.png" alt="Image Alt"></p>
 <p>Then edit the component. You will notice that a <strong>source</strong> tab appears. It will allow you to add your javascript in your component. Put the JavaScript you want. In this example we set:</p>
-<pre><code class="hljs css languages- js">alert(<span class="hljs-string">'Hello World'</span>);
+<pre><code class="hljs css language-js">alert(<span class="hljs-string">'Hello World'</span>);
 </code></pre>
 <p><img src="../img/d00e12f-js-4.png" alt="Image Alt"></p>
 <blockquote>
@@ -79,7 +83,7 @@
 <li>require the <em>JS</em> component and</li>
 <li>call the render method.</li>
 </ul>
-<pre><code class="hljs css languages- js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start</span>(<span class="hljs-params"></span>) </span>{ 
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start</span>(<span class="hljs-params"></span>) </span>{ 
   <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'1c7cf1853a18f50'</span>).render();
 }
 </code></pre>
@@ -90,7 +94,7 @@
 <h2><a class="anchor" aria-hidden="true" id="install-your-bundle-in-another-system"></a><a href="#install-your-bundle-in-another-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install your bundle in another system</h2>
 <p>First, export your bundle by clicking on the <em>export</em> button. Choose <strong>JSON</strong> to export your bundle in a JSON file. Your bundle is ready then to be imported in another system.</p>
 <h3><a class="anchor" aria-hidden="true" id="client-side-example"></a><a href="#client-side-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Client-side example</h3>
-<pre><code class="hljs css languages- html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<pre><code class="hljs css language-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>App<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
@@ -109,7 +113,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="server-side-example"></a><a href="#server-side-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Server-side example</h3>
-<pre><code class="hljs css languages- js"><span class="hljs-keyword">let</span> runtime = <span class="hljs-built_in">require</span>(<span class="hljs-string">'system-runtime'</span>);
+<pre><code class="hljs css language-js"><span class="hljs-keyword">let</span> runtime = <span class="hljs-built_in">require</span>(<span class="hljs-string">'system-runtime'</span>);
 
 <span class="hljs-comment">// install your bundle</span>
 runtime.install(<span class="hljs-string">'myjs.json'</span>);
@@ -123,10 +127,10 @@ runtime.install(<span class="hljs-string">'system2.json'</span>);
 </blockquote>
 <blockquote>
 <p><strong>More details</strong></p>
-<p>See <a href="../docs/export-a-system.html#export-to-json">in this guide</a> to have more details on how to install your bundle client-side or client-side.</p>
+<p>See [in this guide](Export a System.md#export-to-json) to have more details on how to install your bundle client-side or client-side.</p>
 </blockquote>
 <blockquote>
 <p><strong>You can bundle any JavaScript library</strong></p>
 <p>System Designer allows you to easily import JavaScript libraries like <a href="http://facebook.github.io/react/">React</a> in your system.</p>
 </blockquote>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../docs/bundle-your-css.html">← Bundle your CSS</a><a class="docs-next button" href="../docs/bundle-your-html.html">Bundle your HTML →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#define-a-js-model">Define a JS model</a></li><li><a href="#code-the-behavior-of-render-method">Code the behavior of render method</a></li><li><a href="#create-a-js-component">Create a JS component</a></li><li><a href="#run-your-bundle">Run your bundle</a></li><li><a href="#install-your-bundle-in-another-system">Install your bundle in another system</a><ul class="toc-headings"><li><a href="#client-side-example">Client-side example</a></li><li><a href="#server-side-example">Server-side example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../docs/bundle-your-css.html"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="../docs/bundle-your-html.html"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#define-a-js-model">Define a JS model</a></li><li><a href="#code-the-behavior-of-render-method">Code the behavior of render method</a></li><li><a href="#create-a-js-component">Create a JS component</a></li><li><a href="#run-your-bundle">Run your bundle</a></li><li><a href="#install-your-bundle-in-another-system">Install your bundle in another system</a><ul class="toc-headings"><li><a href="#client-side-example">Client-side example</a></li><li><a href="#server-side-example">Server-side example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2018 Erwan Carriou</section></footer></div></body></html>
