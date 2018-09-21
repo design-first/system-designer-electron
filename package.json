@@ -9,8 +9,8 @@
   "license": "Apache-2.0",
   "scripts": {
     "start": "electron main.js",
-    "macOS": "electron-packager ./ --platform=darwin --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.icns --app-copyright \"Copyright © 2018 Erwan Carriou.\" --app-version 3.1.3 --build-version 313000",
-    "windows": "electron-packager ./ --platform=win32 --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.ico --app-copyright \"Copyright © 2018 Erwan Carriou\" --app-version 3.1.3 --build-version 313000 --win32metadata.FileDescription=\"An IDE for designing systems\" --win32metadata.ProductName=\"System Designer\" --win32metadata.OriginalFilename=\"System Designer.exe\" "
+    "macOS": "electron-packager ./ --platform=darwin --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.icns --app-copyright \"Copyright © 2018 Erwan Carriou.\" --app-version 3.1.3 --build-version 313001",
+    "windows": "electron-packager ./ --platform=win32 --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.ico --app-copyright \"Copyright © 2018 Erwan Carriou\" --app-version 3.1.3 --build-version 313001 --win32metadata.FileDescription=\"An IDE for designing systems\" --win32metadata.ProductName=\"System Designer\" --win32metadata.OriginalFilename=\"System Designer.exe\" "
   },
   "devDependencies": {
     "electron": "1.8.8",
