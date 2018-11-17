@@ -5,31 +5,31 @@
 Clone the repository:
 
 ```sh
-$ git clone https://github.com/design-first/system-designer-electron.git
+git clone https://github.com/design-first/system-designer-electron.git
 ```
 
 Install the dependencies:
 
 ```sh
-$ npm i
+npm i
 ```
 
 ## Start System Designer
 
 ```sh
-$ npm run start
+npm run start
 ```
 
 ## Create a macOS application
 
 ```sh
-$ npm run macOS
+npm run macOS
 ```
 
 ## Create a Windows application
 
 ```sh
-$ npm run windows
+npm run windows
 ```
 
 ## License
