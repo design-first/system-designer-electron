@@ -32,6 +32,12 @@ npm run macOS
 npm run windows
 ```
 
+## Create a Linux application
+
+```sh
+npm run linux
+```
+
 ## License
 
 Copyright 2019 Erwan Carriou
