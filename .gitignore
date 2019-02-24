@@ -1,6 +1,14 @@
 npm-debug.log*
 node_modules
-System Designer-darwin-x64
-System Designer-mas-x64
 .node_repl_history
+
+# designated output directory
+# less to specify ignoring after packager run 
+# (change to reflect) electron-packager --out switch
+out
+
+# ignore MacOS Finder dotfiles
 .DS_Store
+
+# ignore directory-specific settings (e.g. "Show Hidden Files") in Linux
+.directory
