@@ -9,11 +9,12 @@
   "license": "Apache-2.0",
   "scripts": {
     "start": "electron main.js",
-    "macOS": "electron-packager ./ --platform=darwin --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.icns --app-copyright \"Copyright © 2019 Erwan Carriou.\" --app-version 3.3.2 --build-version 332000",
-    "windows": "electron-packager ./ --platform=win32 --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.ico --app-copyright \"Copyright © 2019 Erwan Carriou\" --app-version 3.3.2 --build-version 332000 --win32metadata.FileDescription=\"An IDE for designing systems\" --win32metadata.ProductName=\"System Designer\" --win32metadata.OriginalFilename=\"System Designer.exe\" "
+	"linux": "electron-packager ./ SystemDesigner --executable-name=SystemDesigner --out=out --platform=linux --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.png --app-copyright \"Copyright © 2019 Erwan Carriou.\" --app-version 3.3.2 --build-version 332000",
+    "macOS": "electron-packager ./ --out=out --platform=darwin --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.icns --app-copyright \"Copyright © 2019 Erwan Carriou.\" --app-version 3.3.2 --build-version 332000",
+    "windows": "electron-packager ./ --out=out --platform=win32 --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.ico --app-copyright \"Copyright © 2019 Erwan Carriou\" --app-version 3.3.2 --build-version 332000 --win32metadata.FileDescription=\"An IDE for designing systems\" --win32metadata.ProductName=\"System Designer\" --win32metadata.OriginalFilename=\"System Designer.exe\" "
   },
   "devDependencies": {
     "electron": "4.0.5",
-    "electron-packager": "13.0.1"
+    "electron-packager": "^13.1.0"
   }
 }
