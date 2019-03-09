@@ -5,7 +5,7 @@ node_modules
 # designated output directory
 # less to specify ignoring after packager run 
 # (change to reflect) electron-packager --out switch
-out
+dist
 
 # ignore MacOS Finder dotfiles
 .DS_Store
