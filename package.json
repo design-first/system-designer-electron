@@ -1,7 +1,7 @@
 {
   "name": "system-designer-electron",
   "productName": "System Designer",
-  "version": "3.3.3",
+  "version": "3.5.2",
   "description": "System Designer, an IDE for designing systems",
   "homepage": "https://designfirst.io/systemdesigner/",
   "author": "erwan carriou",
@@ -14,7 +14,7 @@
     "windows": "electron-packager ./ --out=dist --platform=win32 --asar --arch=x64 --ignore=\"node_modules\" --overwrite --icon=Icon.ico --app-copyright \"Copyright © 2019 Erwan Carriou\" --app-version 3.3.3 --build-version 333000 --win32metadata.FileDescription=\"An IDE for designing systems\" --win32metadata.ProductName=\"System Designer\" --win32metadata.OriginalFilename=\"System Designer.exe\" "
   },
   "devDependencies": {
-    "electron": "4.0.8",
-    "electron-packager": "^13.1.1"
+    "electron": "5.0.2",
+    "electron-packager": "13.1.1"
   }
 }

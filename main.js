@@ -213,7 +213,7 @@ function createWindow() {
           width: 1024,
           height: 768
         });
-        helpWindow.loadURL('file://' + __dirname + '/documentation/docs/what-is-system-designer.html');
+        helpWindow.loadURL('file://' + __dirname + '/documentation/docs/en/what-is-system-designer.html');
 
         helpWindow.on('closed', () => {
           helpWindow = null;
