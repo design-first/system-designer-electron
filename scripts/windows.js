@@ -31,7 +31,7 @@ const options = {
   overwrite: true,
   icon: 'Icon.ico',
   appVersion: package.version,
-  buildVersion: 352000,
+  buildVersion: package.buildVersion,
   appCopyright: 'Copyright © 2019 Erwan Carriou.',
   win32metadata: {
     FileDescription: 'An IDE for designing systems',

@@ -32,7 +32,7 @@ const options = {
   overwrite: true,
   icon: 'Icon.png',
   appVersion: package.version,
-  buildVersion: 352000,
+  buildVersion: package.buildVersion,
   appCopyright: 'Copyright © 2019 Erwan Carriou.',
   ignore: ['node_modules'],
   afterCopy: [setLanguages([

@@ -1,7 +1,8 @@
 {
   "name": "system-designer-electron",
   "productName": "System Designer",
-  "version": "3.5.2",
+  "version": "3.5.3",
+  "buildVersion": "353000",
   "description": "System Designer, an IDE for designing systems",
   "homepage": "https://designfirst.io/systemdesigner/",
   "author": "erwan carriou",

@@ -31,7 +31,7 @@ const options = {
   overwrite: true,
   icon: 'Icon.icns',
   appVersion: package.version,
-  buildVersion: 352000,
+  buildVersion: package.buildVersion,
   appCopyright: 'Copyright © 2019 Erwan Carriou.',
   ignore: ['node_modules'],
   afterCopy: [setLanguages([
@@ -42,7 +42,7 @@ const options = {
 packager(options)
   .then(path => console.log(`Successfully created System Designer package at ${path}`))
   .catch((err) => {
-    console.error('Error creating macOS package:');
+    console.error('Error creating Mac App Store package:');
     console.error(err, err.stack);
     process.exit(1);
   });
