@@ -210,6 +210,9 @@ function createWindow() {
       label: 'Read the documentation',
       click: () => {
         let helpWindow = new BrowserWindow({
+          webPreferences: {
+            nodeIntegration: true
+          },
           width: 1024,
           height: 768
         });
@@ -299,6 +302,9 @@ function createWindow() {
   Menu.setApplicationMenu(menu);
 
   mainWindow = new BrowserWindow({
+    webPreferences: {
+      nodeIntegration: true
+    },
     width: 1024,
     height: 768
   });
