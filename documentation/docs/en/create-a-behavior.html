@@ -193,7 +193,8 @@ For example, if you have added in the schema:</p>
 <h2><a class="anchor" aria-hidden="true" id="use-_component-class-apis"></a><a href="#use-_component-class-apis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use _Component class APIs</h2>
 <p>By default, your component inherits from <em>_Component</em> model, so you can use:</p>
 <ul>
-<li><strong>this.id()</strong>: to get the id of the component and</li>
+<li><strong>this.id()</strong>: to get the id of the component,</li>
+<li><strong>this.destroy()</strong>: to destroy a component (you can override this method for your needs) and</li>
 <li><strong>this.require(id : string) : _Component</strong>: to require a component.</li>
 </ul>
 <pre><code class="hljs css language-js"><span class="hljs-comment">// require a component</span>
@@ -214,7 +215,7 @@ For example, if you have added in the schema:</p>
 </ul>
 <p>You can also specify the level of your logs:</p>
 <ul>
-<li><strong>this.require('logger').level(level: ['debug', 'info', 'warn', 'error'])</strong>: set a level for your logs.</li>
+<li><strong>this.require('logger').level(level: ['off', 'debug', 'info', 'warn', 'error'])</strong>: set a level for your logs.</li>
 </ul>
 <pre><code class="hljs css language-js"><span class="hljs-comment">// log an information message</span>
 <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'logger'</span>).info(<span class="hljs-string">'this is an message'</span>);
