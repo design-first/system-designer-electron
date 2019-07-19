@@ -1,8 +1,8 @@
 {
   "name": "system-designer-electron",
   "productName": "System Designer",
-  "version": "4.0.0",
-  "buildVersion": "400000",
+  "version": "4.0.1",
+  "buildVersion": "401000",
   "description": "System Designer, an IDE for designing systems",
   "homepage": "https://designfirst.io/systemdesigner/",
   "author": "erwan carriou",
@@ -15,8 +15,8 @@
     "windows": "node ./scripts/windows.js"
   },
   "devDependencies": {
-    "electron": "4.2.6",
-    "electron-packager": "14.0.1",
+    "electron": "4.2.7",
+    "electron-packager": "14.0.2",
     "electron-packager-languages": "0.3.0"
   }
 }
