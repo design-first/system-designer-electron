@@ -3,7 +3,7 @@
  *
  * https://designfirst.io/systemdesigner/
  *
- * Copyright 2019 Erwan Carriou
+ * Copyright 2020 Erwan Carriou
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ const options = {
   icon: 'Icon.png',
   appVersion: package.version,
   buildVersion: package.buildVersion,
-  appCopyright: 'Copyright © 2019 Erwan Carriou.',
+  appCopyright: 'Copyright © 2020 Erwan Carriou.',
   ignore: ['node_modules'],
   afterCopy: [setLanguages([
     'en', 'en-US'
