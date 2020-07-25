@@ -15,8 +15,8 @@
     "windows": "node ./scripts/windows.js"
   },
   "devDependencies": {
-    "electron": "8.2.0",
-    "electron-packager": "14.2.1",
+    "electron": "9.1.1",
+    "electron-packager": "15.0.0",
     "electron-packager-languages": "0.4.0"
   }
 }
