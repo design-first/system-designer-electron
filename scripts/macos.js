@@ -26,7 +26,7 @@ const options = {
   dir: './',
   out: 'dist',
   platform: 'darwin',
-  arch: 'x64',
+  arch: 'x64,arm64',
   asar: true,
   overwrite: true,
   icon: 'Icon.icns',

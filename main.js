@@ -211,7 +211,9 @@ function createWindow() {
       click: () => {
         let helpWindow = new BrowserWindow({
           webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            contextIsolation: false,
+            enableRemoteModule: true
           },
           width: 1024,
           height: 768
@@ -303,7 +305,9 @@ function createWindow() {
 
   mainWindow = new BrowserWindow({
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      contextIsolation: false,
+      enableRemoteModule: true
     },
     width: 1024,
     height: 768
