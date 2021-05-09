@@ -21,6 +21,8 @@
 const packager = require('electron-packager');
 const setLanguages = require('electron-packager-languages');
 const package = require('../package.json');
+const { makeUniversalApp } = require('@electron/universal');
+const resolve = require('path').resolve;
 
 const options = {
   dir: './',
@@ -40,9 +42,27 @@ const options = {
 };
 
 packager(options)
-  .then(path => console.log(`Successfully created System Designer package at ${path}`))
+  .then(path => {
+    console.log(`Successfully created System Designer x64 and arm64 packages at ${path}`)
+  })
   .catch((err) => {
-    console.error('Error creating Mac App Store package:');
+    console.error('Error creating x64 and arm64 packages:');
     console.error(err, err.stack);
     process.exit(1);
-  });
+  })
+  .then(() => {
+
+    makeUniversalApp({
+      x64AppPath: resolve('./dist/System Designer-darwin-x64/System Designer.app'),
+      arm64AppPath: resolve('./dist/System Designer-darwin-arm64/System Designer.app'),
+      outAppPath: resolve('./dist/system-designer-electron/dist/System Designer-darwin-universal/System Designer.app'),
+      force: true
+    });
+
+    console.log(`Successfully created System Designer universal package at dist/system-designer-electron/dist/System Designer-darwin-universal`)
+  })
+  .catch((err) => {
+    console.error('Error creating universal package:');
+    console.error(err, err.stack);
+    process.exit(1);
+  })
