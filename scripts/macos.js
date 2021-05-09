@@ -55,11 +55,11 @@ packager(options)
     makeUniversalApp({
       x64AppPath: resolve('./dist/System Designer-darwin-x64/System Designer.app'),
       arm64AppPath: resolve('./dist/System Designer-darwin-arm64/System Designer.app'),
-      outAppPath: resolve('./dist/system-designer-electron/dist/System Designer-darwin-universal/System Designer.app'),
+      outAppPath: resolve('./dist/System Designer-darwin-universal/System Designer.app'),
       force: true
     });
 
-    console.log(`Successfully created System Designer universal package at dist/system-designer-electron/dist/System Designer-darwin-universal`)
+    console.log(`Successfully created System Designer universal package at dist/System Designer-darwin-universal`)
   })
   .catch((err) => {
     console.error('Error creating universal package:');
