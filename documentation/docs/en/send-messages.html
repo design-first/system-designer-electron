@@ -73,10 +73,13 @@
 <li>select <strong>Send messages through a channel</strong> from the proposed systems,</li>
 <li>click on the <strong>Compose</strong> button,</li>
 </ul>
-<p><img src="../../img/743f357-system-designer-channel-1.png" alt="Image Alt"></p>
+<p><img src="../../img/send-messages-1.png" alt="Image Alt"></p>
 <p>This system has now been composed in your system.</p>
 <ul>
-<li>on <strong>Schemas</strong> tab, click on <strong>_Channel</strong> model (on the right panel under <em>Schemas</em>),</li>
+<li>on <strong>Schemas</strong> tab, click on <strong>_Channel</strong> schema (on the right panel under <em>Schemas</em>),</li>
+</ul>
+<p><img src="../../img/send-messages-2.png" alt="Image Alt"></p>
+<ul>
 <li>click on <strong>_Channel</strong> schema to edit it,</li>
 <li>add <strong>somethingHappened</strong> event:</li>
 </ul>
@@ -91,7 +94,10 @@
 }
 </code></pre>
 <ul>
-<li>on <strong>Models</strong> tab, click on <strong>_Channel</strong> model (on the right panel under <em>Schemas</em>),</li>
+<li>on <strong>Models</strong> tab, click on <strong>_Channel</strong> model (on the right panel under <em>Models</em>),</li>
+</ul>
+<p><img src="../../img/send-messages-3.png" alt="Image Alt"></p>
+<ul>
 <li>click on <strong>_Channel</strong> model,</li>
 <li>edit with this code:</li>
 </ul>
@@ -129,7 +135,7 @@
 <li>select <em>somethingHappened</em> from the list,</li>
 <li>click on the <em>Create</em> button</li>
 </ul>
-<p><img src="../../img/7091872-system-designer-channel-2.png" alt="Image Alt"></p>
+<p><img src="../../img/send-messages-4.png" alt="Image Alt"></p>
 <ul>
 <li>click on the <strong>somethingHappened</strong> behavior,</li>
 <li>add this code:</li>
@@ -141,9 +147,10 @@
   logger.info(<span class="hljs-string">'the message "'</span> + param + <span class="hljs-string">'" has been send.'</span>);
 }
 </code></pre>
+<p><img src="../../img/send-messages-5.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="send-the-message"></a><a href="#send-the-message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Send the message</h2>
 <ul>
-<li>on <em>Behavior</em> tab, select your system  (on the right panel under <em>System</em>),</li>
+<li>on <em>Behavior</em> tab, select your system (on the right panel under <em>System</em>),</li>
 <li>click on <em>start</em> behavior,</li>
 <li>add this code:</li>
 </ul>
@@ -151,10 +158,11 @@
   <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'channel'</span>).somethingHappened(<span class="hljs-string">'my message'</span>);  
 }
 </code></pre>
+<p><img src="../../img/send-messages-6.png" alt="Image Alt"></p>
 <ul>
 <li>run your system</li>
 </ul>
-<p><img src="../../img/ef64888-system-designer-channel-3.png" alt="Image Alt"></p>
+<p><img src="../../img/send-messages-7.png" alt="Image Alt"></p>
 <ul>
 <li>you will see a message on the bottom right of System Designer and a new log on the <em>Logs</em> tab.</li>
 </ul>

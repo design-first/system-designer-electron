@@ -71,23 +71,23 @@ A schema generates a model based on very simple informations. You can then edit 
 <li>then click on <em>Create</em> button,</li>
 <li>a new schema is now created and appears in the <em>Schema</em> list:</li>
 </ul>
-<p><img src="../../img/8d678d7-schema-create.png" alt="Image Alt"></p>
+<p><img src="../../img/create-a-schema-create.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="schema-edition"></a><a href="#schema-edition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Schema edition</h2>
 <ul>
 <li>then click on the created schema,</li>
 <li>an editor will open the content of the schema,</li>
 <li>you can now edit your schema:</li>
 </ul>
-<p><img src="../../img/df8a98c-schema-edit.png" alt="Image Alt"></p>
+<p><img src="../../img/create-a-schema-edit.png" alt="Image Alt"></p>
 <ul>
 <li>go back to the <strong>Schemas</strong> tab and</li>
 <li>your modifications have been updated.</li>
 </ul>
-<p><img src="../../img/962d821-schema-prop.png" alt="Image Alt"></p>
+<p><img src="../../img/create-a-schema-prop.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="define-inheritance"></a><a href="#define-inheritance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define inheritance</h2>
 <p>To add inheritance between your schemas, you need to add the <strong>_inherit</strong> property to your schemas. This property is an array in which you put all the schemas that this schema must inherit.</p>
 <pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"m1da931573d19acc"</span>,
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"ee8b5c97-cb89-4cdf-82b3-d9d8bea23ac5"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
   <span class="hljs-attr">"_inherit"</span>: [
     <span class="hljs-string">"Person"</span>
@@ -97,7 +97,7 @@ A schema generates a model based on very simple informations. You can then edit 
 <h2><a class="anchor" aria-hidden="true" id="define-a-property"></a><a href="#define-a-property" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define a property</h2>
 <p>To define a property, add a key that has got a <strong>property</strong> value.</p>
 <pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"m1da931573d19acc"</span>,
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"ee8b5c97-cb89-4cdf-82b3-d9d8bea23ac5"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"property"</span>
 }
@@ -105,7 +105,7 @@ A schema generates a model based on very simple informations. You can then edit 
 <h2><a class="anchor" aria-hidden="true" id="define-a-link"></a><a href="#define-a-link" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define a link</h2>
 <p>To define a link between models, add a key that has got a <strong>link</strong> value. A link is a 1-1 link between models.</p>
 <pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"m1da931573d19acc"</span>,
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"ee8b5c97-cb89-4cdf-82b3-d9d8bea23ac5"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
   <span class="hljs-attr">"father"</span>: <span class="hljs-string">"link"</span>
 }
@@ -117,7 +117,7 @@ A schema generates a model based on very simple informations. You can then edit 
 <li>a collection of components (i.e. like a 1-N link between models).</li>
 </ul>
 <pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"m1da931573d19acc"</span>,
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"ee8b5c97-cb89-4cdf-82b3-d9d8bea23ac5"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
   <span class="hljs-attr">"children"</span>: <span class="hljs-string">"collection"</span>
 }
@@ -125,7 +125,7 @@ A schema generates a model based on very simple informations. You can then edit 
 <h2><a class="anchor" aria-hidden="true" id="define-a-method"></a><a href="#define-a-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define a method</h2>
 <p>To define a method, add a key that has got a <strong>method</strong> value.</p>
 <pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"m1da931573d19acc"</span>,
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"ee8b5c97-cb89-4cdf-82b3-d9d8bea23ac5"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
   <span class="hljs-attr">"fullName"</span>: <span class="hljs-string">"method"</span>
 }
@@ -133,7 +133,7 @@ A schema generates a model based on very simple informations. You can then edit 
 <h2><a class="anchor" aria-hidden="true" id="define-an-event"></a><a href="#define-an-event" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define an event</h2>
 <p>To define an event, add a key that has got an <strong>event</strong> value. An event is a asynchronous method.</p>
 <pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"m1da931573d19acc"</span>,
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"ee8b5c97-cb89-4cdf-82b3-d9d8bea23ac5"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
   <span class="hljs-attr">"statusChanged"</span>: <span class="hljs-string">"event"</span>
 }

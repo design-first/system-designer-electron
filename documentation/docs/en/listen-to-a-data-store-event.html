@@ -78,7 +78,7 @@ It sends:</p>
 <li>has a <strong>name</strong> property</li>
 </ul>
 <pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"b13d3510f7c15b1c"</span>,
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"eb74b2c8-a1b7-4a08-aa6e-eaf029e2e3f2"</span>,
   <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Person"</span>,
   <span class="hljs-attr">"_inherit"</span>: [
     <span class="hljs-string">"_Component"</span>
@@ -116,10 +116,13 @@ It sends:</p>
 <li>select <strong>Listen to components collection events</strong> from the proposed systems,</li>
 <li>click on the <strong>Compose</strong> button,</li>
 </ul>
-<p><img src="../../img/96f0d35-listen-collection-event.png" alt="Image Alt"></p>
+<p><img src="../../img/listen-to-a-data-store-event-dialog.png" alt="Image Alt"></p>
 <p>This system has now been composed in your system.</p>
 <ul>
 <li>on <strong>Behaviors</strong> tab, click on <strong>_Database</strong> model (on the right panel under <em>Models</em>),</li>
+</ul>
+<p><img src="../../img/listen-to-a-data-store-event-_database.png" alt="Image Alt"></p>
+<ul>
 <li>click on the <strong>update</strong> behavior to edit it,</li>
 <li>add this code:</li>
 </ul>
@@ -138,7 +141,7 @@ It sends:</p>
 <li>run your system.</li>
 </ul>
 <p>You will see a message telling that the property of the component has changed.</p>
-<p><img src="../../img/5b2c3bf-db-listen.png" alt="Image Alt"></p>
+<p><img src="../../img/listen-to-a-data-store-event-run.png" alt="Image Alt"></p>
 <blockquote>
 <p>A system makes a lot of update on the data store when running, so for performance reason always filter on a specific collection.</p>
 </blockquote>

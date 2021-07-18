@@ -78,13 +78,13 @@
 <li>has a <strong>source</strong> property and</li>
 <li>a <strong>render</strong> method.</li>
 </ul>
-<p><img src="../../img/6f6886b-js-1.png" alt="Image Alt"></p>
+<p><img src="../../img/bundle-your-js-1.png" alt="Image Alt"></p>
 <p>Then edit the model:</p>
 <ul>
 <li>change the type of <strong>source</strong> in from <em>any</em> to <em>javascript</em> and</li>
-<li>remove all properties of <em>render</em> method. This method will have no parameter and no return value.</li>
+<li>empty <em>params</em> array of <em>render</em> method.</li>
 </ul>
-<p><img src="../../img/4d9886c-js-2.png" alt="Image Alt"></p>
+<p><img src="../../img/bundle-your-js-2.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="code-the-behavior-of-render-method"></a><a href="#code-the-behavior-of-render-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code the behavior of render method</h2>
 <p>Edit the <strong>render</strong> method of the model as follow:</p>
 <pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">render</span>(<span class="hljs-params"></span>) </span>{
@@ -94,32 +94,34 @@
   <span class="hljs-built_in">document</span>.head.appendChild(div);
 }
 </code></pre>
-<p><img src="../../img/bb4f4ce-js-3.png" alt="Image Alt"></p>
+<p><img src="../../img/bundle-your-js-3.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="create-a-js-component"></a><a href="#create-a-js-component" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a JS component</h2>
 <p>Now create a <em>JS</em> component from the interface.</p>
-<p><img src="../../img/203748c-js-31.png" alt="Image Alt"></p>
+<p><img src="../../img/bundle-your-js-4.png" alt="Image Alt"></p>
 <p>Then edit the component. You will notice that a <strong>source</strong> tab appears. It will allow you to add your javascript in your component. Put the JavaScript you want. In this example we set:</p>
 <pre><code class="hljs css language-js">alert(<span class="hljs-string">'Hello World'</span>);
 </code></pre>
-<p><img src="../../img/d00e12f-js-4.png" alt="Image Alt"></p>
+<p><img src="../../img/bundle-your-js-5.png" alt="Image Alt"></p>
 <blockquote>
 <p><strong>What happens?</strong></p>
 <p>Because in the model you tell that <strong>source</strong> property has for type <em>javascript</em>. System Designer let you edit this property as JavaScript. It means that System Designer will check that the JavaScript you write is correct.</p>
 </blockquote>
-<p>##Render your component in your application</p>
+<p>Then click on the <strong>Component</strong> tab to edit the <em>_<em>id</em></em> property value of the component:</p>
+<p><img src="../../img/bundle-your-js-6.png" alt="Image Alt"></p>
+<h2><a class="anchor" aria-hidden="true" id="render-your-component-in-your-application"></a><a href="#render-your-component-in-your-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Render your component in your application</h2>
 <p>Edit the <strong>start</strong> method of your system and:</p>
 <ul>
 <li>require the <em>JS</em> component and</li>
 <li>call the render method.</li>
 </ul>
 <pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start</span>(<span class="hljs-params"></span>) </span>{ 
-  <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'1c7cf1853a18f50'</span>).render();
+  <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'alertComponent'</span>).render();
 }
 </code></pre>
-<p><img src="../../img/dc8cd08-JS-5.png" alt="Image Alt"></p>
+<p><img src="../../img/bundle-your-js-7.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="run-your-bundle"></a><a href="#run-your-bundle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run your bundle</h2>
 <p>Now you can run your system and see the result.</p>
-<p><img src="../../img/s1sJYegaRnKxYdqaEDcx_JS-6.png" alt="Image Alt"></p>
+<p><img src="../../img/bundle-your-js-8.png" alt="Image Alt"></p>
 <h2><a class="anchor" aria-hidden="true" id="install-your-bundle-in-another-system"></a><a href="#install-your-bundle-in-another-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Install your bundle in another system</h2>
 <p>First, export your bundle by clicking on the <em>export</em> button. Choose <strong>JSON</strong> to export your bundle in a JSON file. Your bundle is ready then to be imported in another system.</p>
 <h3><a class="anchor" aria-hidden="true" id="client-side-example"></a><a href="#client-side-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Client-side example</h3>
@@ -162,4 +164,4 @@ runtime.install(<span class="hljs-string">'system2.json'</span>);
 <p><strong>You can bundle any JavaScript library</strong></p>
 <p>System Designer allows you to easily import JavaScript libraries like <a href="https://facebook.github.io/react/">React</a> in your system.</p>
 </blockquote>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../../docs/en/bundle-your-css.html"><span class="arrow-prev">← </span><span>Bundle your CSS</span></a><a class="docs-next button" href="../../docs/en/bundle-your-html.html"><span>Bundle your HTML</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#define-a-js-model">Define a JS model</a></li><li><a href="#code-the-behavior-of-render-method">Code the behavior of render method</a></li><li><a href="#create-a-js-component">Create a JS component</a></li><li><a href="#run-your-bundle">Run your bundle</a></li><li><a href="#install-your-bundle-in-another-system">Install your bundle in another system</a><ul class="toc-headings"><li><a href="#client-side-example">Client-side example</a></li><li><a href="#server-side-example">Server-side example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2021 Erwan Carriou</section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../../docs/en/bundle-your-css.html"><span class="arrow-prev">← </span><span>Bundle your CSS</span></a><a class="docs-next button" href="../../docs/en/bundle-your-html.html"><span>Bundle your HTML</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#define-a-js-model">Define a JS model</a></li><li><a href="#code-the-behavior-of-render-method">Code the behavior of render method</a></li><li><a href="#create-a-js-component">Create a JS component</a></li><li><a href="#render-your-component-in-your-application">Render your component in your application</a></li><li><a href="#run-your-bundle">Run your bundle</a></li><li><a href="#install-your-bundle-in-another-system">Install your bundle in another system</a><ul class="toc-headings"><li><a href="#client-side-example">Client-side example</a></li><li><a href="#server-side-example">Server-side example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2021 Erwan Carriou</section></footer></div></body></html>
