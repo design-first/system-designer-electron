@@ -1,5 +1,6 @@
 npm-debug.log*
 node_modules
+provisioning
 dist
 scripts/mas.js
 .node_repl_history
