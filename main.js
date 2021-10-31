@@ -25,6 +25,8 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 
+require('@electron/remote/main').initialize()
+
 /**
  * @method nextWindow
  * @description focus on the next window
@@ -312,6 +314,10 @@ function createWindow() {
     width: 1024,
     height: 768
   });
+
+  // to enable exportation
+  require('@electron/remote/main').enable(mainWindow.webContents);
+
   mainWindow.loadURL('file://' + __dirname + '/designer/index.html');
 
   mainWindow.on('closed', () => {
