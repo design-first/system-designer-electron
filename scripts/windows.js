@@ -3,7 +3,7 @@
  *
  * https://designfirst.io/systemdesigner/
  *
- * Copyright 2021 Erwan Carriou
+ * Copyright 2022 Erwan Carriou
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,13 +32,12 @@ const options = {
   icon: 'Icon.ico',
   appVersion: package.version,
   buildVersion: package.buildVersion,
-  appCopyright: 'Copyright © 2021 Erwan Carriou.',
+  appCopyright: 'Copyright © 2022 Erwan Carriou.',
   win32metadata: {
     FileDescription: 'An IDE for designing systems',
     ProductName: 'System Designer',
     OriginalFilename: 'System Designer.exe'
   },
-  ignore: ['node_modules'],
   afterCopy: [setLanguages([
     'en', 'en-US'
   ])]

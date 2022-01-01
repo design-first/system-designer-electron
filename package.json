@@ -15,7 +15,7 @@
     "windows": "node ./scripts/windows.js"
   },
   "dependencies": {
-    "electron": "15.3.0",
+    "electron": "16.0.5",
     "@electron/remote": "2.0.1"
   },
   "devDependencies": {
