@@ -2,7 +2,7 @@
   "name": "system-designer-electron",
   "productName": "System Designer",
   "version": "5.2.0",
-  "buildVersion": "520001",
+  "buildVersion": "520002",
   "description": "System Designer, a low-code development platform for creating systems",
   "homepage": "https://designfirst.io/systemdesigner/",
   "author": "erwan carriou",
