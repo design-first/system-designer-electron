@@ -34,7 +34,7 @@ npm run macOS
 npm run windows
 ```
 
->Packages will be created in the `/dist` directory.
+>Package will be created in the `/dist` directory.
 
 ## Create a Linux application
 
@@ -42,7 +42,7 @@ npm run windows
 npm run linux
 ```
 
->Packages will be created in the `/dist` directory.
+>Package will be created in the `/dist` directory.
 
 ## License
 
