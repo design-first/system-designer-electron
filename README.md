@@ -26,17 +26,23 @@ npm run start
 npm run macOS
 ```
 
+>Packages will be created in the `/dist` directory.
+
 ## Create a Windows application
 
 ```sh
 npm run windows
 ```
 
+>Packages will be created in the `/dist` directory.
+
 ## Create a Linux application
 
 ```sh
 npm run linux
 ```
+
+>Packages will be created in the `/dist` directory.
 
 ## License
 
