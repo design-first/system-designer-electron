@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Create a Type · System Designer</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Types defined in System Designer can be the used in *type* property of a model."/><meta name="docsearch:language" content="zh-TW"/><meta property="og:title" content="Create a Type · System Designer"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io../../index.html"/><meta property="og:description" content="Types defined in System Designer can be the used in *type* property of a model."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="../../img/favicon.ico"/><link rel="stylesheet" href="../../css/zenburn.css"/><script type="text/javascript" src="../../js/links.js"></script><script type="text/javascript" src="../../js/clipboard.js"></script><script type="text/javascript" src="../../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="../../js/scrollSpy.js"></script><link rel="stylesheet" href="../../css/main.css"/><script src="../../js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="../../zh-TW"><img class="logo" src="../../img/logo.png" alt="System Designer"/><h2 class="headerTitleWithLogo">System Designer</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="../../img/language.svg" alt="Languages icon"/>繁體中文</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="../../docs/en/create-a-type.html">English</a></li><li><a href="../../docs/el-GR/create-a-type.html">Ελληνικά</a></li><li><a href="../../docs/pt-BR/create-a-type.html">Português (Brasil)</a></li><li><a href="../../docs/sv-SE/create-a-type.html">Svenska</a></li><li><a href="https://crowdin.com/project/system-designer" target="_blank" rel="noreferrer noopener">Help Translate</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/what-is-system-designer.html">What is System Designer?</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/what-is-design-first.html">What is Design First?</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/quick-start.html">Quick Start</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/quick-start-videos.html">Quick Start in videos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-system.html">Create a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-schema.html">創建一個模式</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/edit-a-model.html">Edit a model</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-behavior.html">Create a Behavior</a></li><li class="navListItem navListItemActive"><a class="navItem" href="../../docs/zh-TW/create-a-type.html">Create a Type</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-component.html">Create a Component</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/run-your-system.html">Run your System</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/export-a-system.html">Export a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/import-a-system.html">Import a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/generate-a-diagram.html">Generate a diagram</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/sync-your-system-with-github.html">Sync your systems with GitHub</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/design-a-remote-client-system.html">Design a remote client system</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/design-a-remote-server-system.html">Design a remote server system</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/manage-extensions.html">Manage Extensions</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/extend-system-designer.html">Extend System Designer</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/shortcuts.html">Shortcuts</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/list-examples.html">List of Examples</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/bundle-your-css.html">Bundle your CSS</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/bundle-your-javascript.html">Bundle your JavaScript</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/bundle-your-html.html">Bundle your HTML</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/test-a-server-side-application.html">Test a server-side application</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-npm-module.html">Create a NPM module</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-website.html">Create a website</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/listen-to-a-model-event.html">Listen to a model event</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/listen-to-a-data-store-event.html">Listen to a data store event</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/send-messages.html">Send messages</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/send-messages-to-other-systems.html">Send messages to other systems</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-an-extension.html">Create an extension</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/generate-a-model-from-a-json-file.html">Generate a model from a JSON file</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-graph-system.html">Create a Graph system</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Articles</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/articles-about-the-project.html">關於這個開源方案</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/who-is-behind-system-designer.html">Who is behind System Designer?</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/privacy-policy.html">Privacy Policy</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/license.html">License</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/system-designer/zh-TW" target="_blank" rel="noreferrer noopener">Translate</a><h1 id="__docusaurus" class="postHeaderTitle">Create a Type</h1></header><article><div><span><p>Types defined in System Designer can be the used in <em>type</em> property of a model.</p>
+<h2><a class="anchor" aria-hidden="true" id="create-a-type"></a><a href="#create-a-type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a type</h2>
+<p>To create a type in System Designer:</p>
+<ul>
+<li>click on the <strong>Types</strong> tab,</li>
+<li>click on the '+' button on the left toolbar,</li>
+<li>type the <em>name</em> of your type,</li>
+</ul>
+<p><img src="../../img/create-a-type-dialog.png" alt="Image Alt"></p>
+<ul>
+<li>click on <em>Enumeration</em> checkbox if you want to create an enumeration,</li>
+<li>then click on <em>Create</em> button,</li>
+<li>a new type is now created and appears in the <em>Types</em> list:</li>
+</ul>
+<p><img src="../../img/create-a-type.png" alt="Image Alt"></p>
+<ul>
+<li>this new type can be then used in your model.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="update-a-type"></a><a href="#update-a-type" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update a type</h2>
+<ul>
+<li>click on the created type,</li>
+<li>an editor will open the content of the type,</li>
+<li>you can now edit the configuration of the type:</li>
+</ul>
+<p><img src="../../img/create-a-type-edit.png" alt="Image Alt"></p>
+<h2><a class="anchor" aria-hidden="true" id="what-is-a-configuration"></a><a href="#what-is-a-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is a configuration?</h2>
+<p>A configuration is an object in which you declare the properties of your type.</p>
+<h2><a class="anchor" aria-hidden="true" id="define-an-enumeration"></a><a href="#define-an-enumeration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define an enumeration</h2>
+<p>To define an enumeration click on the <em>Enumeration</em> checkbox when creating a type. Then set the <em>type</em> of your enumeration (it is <em>any</em> by default) and add all the value of your enumeration in the <em>value</em> array.</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"a44f44d2-7bcb-4bce-9638-d61dc595e873"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"color"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"list of colors"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"value"</span>: [
+    <span class="hljs-string">"blue"</span>,
+    <span class="hljs-string">"red"</span>,
+    <span class="hljs-string">"green"</span>,
+    <span class="hljs-string">"maroon"</span>
+  ]
+}
+</code></pre>
+<p>In the example we have defined a <em>color</em> type that is a <em>string</em> enumeration. It could have for value: <em>blue</em>, <em>red</em>, <em>green</em> or <em>maroon</em>.</p>
+<p>In the configuration object of a <em>enumeration</em> you have:</p>
+<ul>
+<li><strong>_id : string</strong>, unique id of the enumeration.</li>
+<li><strong>name : string</strong>, name of the enumeration.</li>
+<li><strong>description : string</strong>, comments about the enumeration.</li>
+<li><strong>type : string</strong>, the type of the enumeration.</li>
+<li><strong>value : array</strong>, possible values of the enumeration.</li>
+</ul>
+<blockquote>
+<p><strong>What types can be set?</strong></p>
+<ul>
+<li><strong>boolean</strong>, <strong>string</strong>, <strong>number</strong>, <strong>array</strong>, <strong>date</strong>: standard types,</li>
+<li><strong>object</strong>: for non typed object,</li>
+<li><strong>css</strong>, <strong>html</strong>, <strong>javascript</strong>, <strong>json</strong>, <strong>text</strong>: for live editing of CSS, HTML, JavaScript, JSON or a text and</li>
+<li><strong>any</strong>: for any kind of type.</li>
+</ul>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="use-an-enumeration-in-the-model"></a><a href="#use-an-enumeration-in-the-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use an enumeration in the model</h2>
+<p>To use an enumeration type in a model set the <em>type</em> value of a property with an enumeration type.</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"aae7856b-e531-479d-9ddc-ae7590e4ca93"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"_description"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"eyeColor"</span>: {
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"eyeColor"</span>,
+    <span class="hljs-attr">"readOnly"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"default"</span>: <span class="hljs-string">"maroon"</span>
+   },
+}
+</code></pre>
+<p>In this example, a <em>Jedi</em> model, <em>eyeColor</em> has <em>eyeColor</em> type, which is an enumeration type.</p>
+<blockquote>
+<p>When defining a type in the model do not forget to set a <em>default</em> value.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="use-an-enumeration-in-a-component"></a><a href="#use-an-enumeration-in-a-component" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use an enumeration in a component</h2>
+<p>This type can be used to define <em>eyeColor</em> value in a component:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"luke"</span>,
+  <span class="hljs-attr">"eyeColor"</span>: <span class="hljs-string">"maroon"</span>
+}
+</code></pre>
+<blockquote>
+<p>if a not valid value is set for an enumeration you will have an error message in the logs.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="use-an-enumeration-in-the-code"></a><a href="#use-an-enumeration-in-the-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use an enumeration in the code</h2>
+<p>You can get and set an enumeration very easily with APIs:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> luke = <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'luke'</span>);
+
+<span class="hljs-comment">// get the eyeColor of luke component</span>
+luke.eyeColor();
+
+<span class="hljs-comment">// set the eyeColor of luke component</span>
+luke.eyeColor(<span class="hljs-string">'maroon'</span>);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="define-a-structure"></a><a href="#define-a-structure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define a structure</h2>
+<p>If you want to define a new type that is a structure, do not click on the <em>Enumeration</em> checkbox when creating a type. Then define the different properties of your structure in <em>schema</em> configuration object.</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"a44f44d2-7bcb-4bce-9638-d61dc595e873"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"an address"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
+  <span class="hljs-attr">"schema"</span>: {
+    <span class="hljs-attr">"city"</span>: {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">"default"</span>: <span class="hljs-string">""</span>
+    },
+    <span class="hljs-attr">"zip"</span>: {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"number"</span>,
+      <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">"default"</span>: <span class="hljs-number">1</span>
+    },
+    <span class="hljs-attr">"country"</span>: {
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">"default"</span>: <span class="hljs-string">""</span>
+   }
+  }
+}
+</code></pre>
+<p>In this example we have defined <em>address</em> type that is composed of a <em>city</em>, <em>zip</em> and <em>country</em> property.</p>
+<p>In the configuration object of a <em>enumeration</em> you have:</p>
+<ul>
+<li><strong>_id : string</strong>, unique id of the structure.</li>
+<li><strong>name : string</strong>, name of the structure.</li>
+<li><strong>description : string</strong>, comments about the structure.</li>
+<li><strong>type : string|array</strong>, the type of the structure. Must be object.</li>
+<li><strong>schema : object</strong>, the properties of the structure. A property is defined by a configuration object that has for properties:
+<ul>
+<li><strong>type : string|array</strong>, the type of the property.</li>
+<li><strong>mandatory : boolean</strong>, <em>true</em> if the property is mandatory.</li>
+<li><strong>default: any</strong>, default value of the property. It needs to have the type defined in <strong>type</strong> property.</li>
+</ul></li>
+</ul>
+<blockquote>
+<p><strong>What types can be set?</strong></p>
+<ul>
+<li><strong>boolean</strong>, <strong>string</strong>, <strong>number</strong>, <strong>array</strong>, <strong>date</strong>: standard types,</li>
+<li><strong>object</strong>: for non typed object,</li>
+<li><strong>css</strong>, <strong>html</strong>, <strong>javascript</strong>, <strong>json</strong>, <strong>text</strong>: for live editing of CSS, HTML, JavaScript, JSON or a text and</li>
+<li><strong>any</strong>: for any kind of type.</li>
+</ul>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="use-a-structure-in-the-model"></a><a href="#use-a-structure-in-the-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use a structure in the model</h2>
+<p>To use the new type in a model set the <em>type</em> value of a property with the new created type.</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"aae7856b-e531-479d-9ddc-ae7590e4ca93"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"_description"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"location"</span>: {
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"address"</span>,
+    <span class="hljs-attr">"readOnly"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"default"</span>: {}
+  }
+}
+</code></pre>
+<p>In this example, a <em>Jedi</em> model, <em>location</em> has <em>address</em> type.</p>
+<blockquote>
+<p>When defining a type in the model do not forget to set a <em>default</em> value.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="use-a-structure-in-a-component"></a><a href="#use-a-structure-in-a-component" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use a structure in a component</h2>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"luke"</span>,
+  <span class="hljs-attr">"location"</span>: {
+    <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Tatooine city"</span>,
+    <span class="hljs-attr">"zip"</span>: <span class="hljs-number">12345</span>,
+    <span class="hljs-attr">"country"</span>: <span class="hljs-string">"Tatooine"</span>
+  }
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="use-a-structure-in-the-code"></a><a href="#use-a-structure-in-the-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use a structure in the code</h2>
+<p>If a type is a structure, you can get and set its values very easily.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> luke = <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'luke'</span>);
+
+<span class="hljs-comment">// get the country of luke component</span>
+luke.location().country();
+
+<span class="hljs-comment">// set the country of luke component</span>
+luke.location().country(<span class="hljs-string">'Tatooine'</span>);
+</code></pre>
+<p>In this example <em>location</em> has <em>address</em> type. Because it has got a <em>country</em> property we can get and set its values with APIs.</p>
+<h2><a class="anchor" aria-hidden="true" id="define-an-alias"></a><a href="#define-an-alias" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define an alias</h2>
+<p>To organize your type you can define an alias for a type. To do that just set the <em>type</em> information with the corresponding type.</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"a44f44d2-7bcb-4bce-9638-d61dc595e873"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"title"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Title of a movie"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<p>In this example <em>title</em> type is a <em>string</em> and can be used in your model as an alias of <em>string</em> type. Example:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"aae7856b-e531-479d-9ddc-ae7590e4ca94"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Movie"</span>,
+  <span class="hljs-attr">"_description"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"title"</span>: {
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"title of the movie"</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"title"</span>,
+    <span class="hljs-attr">"readOnly"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"default"</span>: <span class="hljs-string">""</span>
+  }
+}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../../docs/zh-TW/create-a-behavior.html"><span class="arrow-prev">← </span><span>Create a Behavior</span></a><a class="docs-next button" href="../../docs/zh-TW/create-a-component.html"><span>Create a Component</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-a-type">Create a type</a></li><li><a href="#update-a-type">Update a type</a></li><li><a href="#what-is-a-configuration">What is a configuration?</a></li><li><a href="#define-an-enumeration">Define an enumeration</a></li><li><a href="#use-an-enumeration-in-the-model">Use an enumeration in the model</a></li><li><a href="#use-an-enumeration-in-a-component">Use an enumeration in a component</a></li><li><a href="#use-an-enumeration-in-the-code">Use an enumeration in the code</a></li><li><a href="#define-a-structure">Define a structure</a></li><li><a href="#use-a-structure-in-the-model">Use a structure in the model</a></li><li><a href="#use-a-structure-in-a-component">Use a structure in a component</a></li><li><a href="#use-a-structure-in-the-code">Use a structure in the code</a></li><li><a href="#define-an-alias">Define an alias</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2024 Erwan Carriou</section></footer></div></body></html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Quick Start · System Designer</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this quick start, we will create a system, test it and run it client and server side."/><meta name="docsearch:language" content="pt-BR"/><meta property="og:title" content="Quick Start · System Designer"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io../../index.html"/><meta property="og:description" content="In this quick start, we will create a system, test it and run it client and server side."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="../../img/favicon.ico"/><link rel="stylesheet" href="../../css/zenburn.css"/><script type="text/javascript" src="../../js/links.js"></script><script type="text/javascript" src="../../js/clipboard.js"></script><script type="text/javascript" src="../../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="../../js/scrollSpy.js"></script><link rel="stylesheet" href="../../css/main.css"/><script src="../../js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="../../pt-BR"><img class="logo" src="../../img/logo.png" alt="System Designer"/><h2 class="headerTitleWithLogo">System Designer</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="../../img/language.svg" alt="Languages icon"/>Português (Brasil)</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="../../docs/en/quick-start.html">English</a></li><li><a href="../../docs/el-GR/quick-start.html">Ελληνικά</a></li><li><a href="../../docs/sv-SE/quick-start.html">Svenska</a></li><li><a href="../../docs/zh-TW/quick-start.html">繁體中文</a></li><li><a href="https://crowdin.com/project/system-designer" target="_blank" rel="noreferrer noopener">Help Translate</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Introduction</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/what-is-system-designer.html">What is System Designer?</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/what-is-design-first.html">O que é Design First?</a></li><li class="navListItem navListItemActive"><a class="navItem" href="../../docs/pt-BR/quick-start.html">Quick Start</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/quick-start-videos.html">Quick Start in videos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-system.html">Create a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-schema.html">Create a Schema</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/edit-a-model.html">Edit a model</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-behavior.html">Create a Behavior</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-type.html">Create a Type</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-component.html">Create a Component</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/run-your-system.html">Run your System</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/export-a-system.html">Export a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/import-a-system.html">Import a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/generate-a-diagram.html">Generate a diagram</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/sync-your-system-with-github.html">Sync your systems with GitHub</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/design-a-remote-client-system.html">Design a remote client system</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/design-a-remote-server-system.html">Design a remote server system</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/manage-extensions.html">Manage Extensions</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/extend-system-designer.html">Extend System Designer</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/shortcuts.html">Shortcuts</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/list-examples.html">List of Examples</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/bundle-your-css.html">Bundle your CSS</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/bundle-your-javascript.html">Bundle your JavaScript</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/bundle-your-html.html">Bundle your HTML</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/test-a-server-side-application.html">Test a server-side application</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-npm-module.html">Create a NPM module</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-website.html">Create a website</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/listen-to-a-model-event.html">Listen to a model event</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/listen-to-a-data-store-event.html">Listen to a data store event</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/send-messages.html">Send messages</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/send-messages-to-other-systems.html">Send messages to other systems</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-an-extension.html">Create an extension</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/generate-a-model-from-a-json-file.html">Generate a model from a JSON file</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-graph-system.html">Create a Graph system</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Articles</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/articles-about-the-project.html">Articles about the project</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/who-is-behind-system-designer.html">Quem está por trás do System Designer?</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/privacy-policy.html">Privacy Policy</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/license.html">License</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/system-designer/pt-BR" target="_blank" rel="noreferrer noopener">Translate</a><h1 id="__docusaurus" class="postHeaderTitle">Quick Start</h1></header><article><div><span><p>In this quick start, we will create a system, test it and run it client and server side.</p>
+<h2><a class="anchor" aria-hidden="true" id="o-que-é-um-sistema"></a><a href="#o-que-é-um-sistema" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>O que é um sistema?</h2>
+<p>With System Designer you create in fact <strong>a system</strong> and not an application. But what is a system?</p>
+<p>A system:</p>
+<ul>
+<li>is defined by a <strong>model</strong>,</li>
+<li>is composed by <strong>components</strong> and</li>
+<li>reacts to events with <strong>actions</strong> that we call <strong>behaviors</strong>.</li>
+</ul>
+<p><img src="../../img/quick-start-diagram.png" alt="Image Alt"></p>
+<h2><a class="anchor" aria-hidden="true" id="what-is-the-system-that-we-will-create-"></a><a href="#what-is-the-system-that-we-will-create-" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is the system that we will create ?</h2>
+<p>We want to create <strong>a system that will show the name of the father of Luke Skywalker.</strong></p>
+<p>Now let's define a bit our system with the informations we know about the system (if you have watched <em>Star Wars</em>):</p>
+<ul>
+<li>Luke Skywalker is a <strong>Jedi</strong>,</li>
+<li>Luke Skywalker <strong>father</strong> is Darth Vader and</li>
+<li>Darth Vader is also a <strong>Jedi</strong>.</li>
+</ul>
+<p>From that we see that:</p>
+<ul>
+<li>we have one model: <strong>Jedi</strong>,</li>
+<li>a Jedi has a least for properties <strong>firstName</strong> and <strong>lastName</strong>,</li>
+<li>a Jedi has a link <strong>father</strong> to another Jedi,</li>
+<li>we have 2 Jedis: <strong>Luke Skywalker</strong> and <strong>Darth Vader</strong> and</li>
+<li>Luke Skywalker has for father Darth Vader.</li>
+</ul>
+<p>Now let's create this system.</p>
+<h2><a class="anchor" aria-hidden="true" id="create-a-system"></a><a href="#create-a-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a system</h2>
+<ul>
+<li>click on the '+' button on the left toolbar,</li>
+<li>set <strong>StarWars</strong> as name,</li>
+<li>click on <strong>Create</strong> button,</li>
+<li>a new system is now created and appears in the <strong>Systems</strong> list.</li>
+</ul>
+<p><img src="../../img/quick-start-1.png" alt="Image Alt"></p>
+<h2><a class="anchor" aria-hidden="true" id="create-a-schema"></a><a href="#create-a-schema" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a schema</h2>
+<blockquote>
+<p><strong>What is a schema ?</strong></p>
+<p>A schema helps you to define your model. A schema generates a model based on very simple informations. You can then edit the generated model</p>
+</blockquote>
+<ul>
+<li>click on the <strong>Schemas</strong> tab,</li>
+<li>click on the <strong>+</strong> button on the left toolbar,</li>
+<li>set <strong>Jedi</strong> as name,</li>
+<li>click on <strong>Create</strong> button,</li>
+<li>a new schema is now created and appears in the <strong>Schemas</strong> list,</li>
+</ul>
+<p><img src="../../img/quick-start-2.png" alt="Image Alt"></p>
+<ul>
+<li>click on it,</li>
+<li>update the schema with:</li>
+</ul>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"1e378193da16eef"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"_inherit"</span>: [
+    <span class="hljs-string">"_Component"</span>
+  ],
+  <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"property"</span>,
+  <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"property"</span>,
+  <span class="hljs-attr">"father"</span>: <span class="hljs-string">"link"</span>,
+  <span class="hljs-attr">"fullName"</span>: <span class="hljs-string">"method"</span>
+}
+</code></pre>
+<ul>
+<li>save (by clicking on the first icon of the toolbar).</li>
+</ul>
+<p><img src="../../img/quick-start-3.png" alt="Image Alt"></p>
+<blockquote>
+<p><strong>What can be defined in a schema ?</strong> - Use <strong>property</strong> for defining a property. - Use <strong>link</strong> for defining a one-to-one relationship between models. - Use <strong>collection</strong> for defining a one-to-many relationship between models. - Use <strong>method</strong> for defining a method. - Use <strong>event</strong> for defining an event.</p>
+<p><strong>What happens when you save a schema ?</strong></p>
+<p>A model will be automatically generated based on the informations you set in the schema.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="edit-a-model"></a><a href="#edit-a-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit a model</h2>
+<blockquote>
+<p><strong>What is a model ?</strong></p>
+<p>A model is the UML representation of the class that you will use in your system. You can edit these models and update many informations (type, default value, ...).</p>
+</blockquote>
+<ul>
+<li>click on the <strong>Models</strong> tab,</li>
+</ul>
+<p><img src="../../img/quick-start-4.png" alt="Image Alt"></p>
+<blockquote>
+<p><strong>What are the values set by default ?</strong></p>
+<p>In the example: - all <em>properties</em> have type <strong>any</strong>: they can have all kind of type, - all <em>links</em> have <strong>_Component</strong> type: they can be linked to any kind of object and - all <em>methods</em> have one parameter <em>param</em> of type <strong>any</strong> and they return a value of type <strong>any</strong>.</p>
+</blockquote>
+<ul>
+<li>click on the <strong>Jedi</strong> model,</li>
+<li>update the model with this:</li>
+</ul>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"1a3a2150b31c099"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"firstName"</span>: {
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"readOnly"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"default"</span>: <span class="hljs-string">""</span>
+  },
+  <span class="hljs-attr">"lastName"</span>: {
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"readOnly"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"default"</span>: <span class="hljs-string">""</span>
+  },
+  <span class="hljs-attr">"father"</span>: {
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Jedi"</span>,
+    <span class="hljs-attr">"readOnly"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"default"</span>: <span class="hljs-string">""</span>
+  },
+  <span class="hljs-attr">"fullName"</span>: {
+    <span class="hljs-attr">"result"</span>: <span class="hljs-string">"string"</span>
+  }
+}
+</code></pre>
+<ul>
+<li>save.</li>
+</ul>
+<p><img src="../../img/quick-start-5.png" alt="Image Alt"></p>
+<blockquote>
+<p><strong>What has be done ?</strong></p>
+<p>In this example, we have: - set the type of <strong>firstName</strong> to <strong>string</strong>, - set the type of <strong>lastName</strong> to <strong>string</strong>, - set the type of <strong>father</strong> link to <strong>Jedi</strong> (the father of a Jedi is a Jedi) and - remove all the parameter definition of the <strong>fullName</strong> method.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="add-a-behavior"></a><a href="#add-a-behavior" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a behavior</h2>
+<blockquote>
+<p><strong>What is a behavior ?</strong></p>
+<p>A behavior is an <strong>action</strong> that is executed when we change the state of a component or invoke one of its method.</p>
+</blockquote>
+<ul>
+<li>click on the <strong>Models</strong> tab,</li>
+<li>click on <strong>fullName</strong> method,</li>
+</ul>
+<p><img src="../../img/quick-start-6.png" alt="Image Alt"></p>
+<ul>
+<li>you navigate to the <strong>Behaviors</strong> tab,</li>
+</ul>
+<p><img src="../../img/quick-start-7.png" alt="Image Alt"></p>
+<ul>
+<li>click on the <strong>fullName</strong> element,</li>
+<li>update the action with this:</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fullName</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> result = <span class="hljs-keyword">this</span>.firstName() + <span class="hljs-string">' '</span> + <span class="hljs-keyword">this</span>.lastName();
+  <span class="hljs-keyword">return</span> result;
+}
+</code></pre>
+<blockquote>
+<p>For every property set in the schema, there is a method to get / get its value.</p>
+<p>System Designer uses JavaScript as main language for building systems.</p>
+</blockquote>
+<ul>
+<li>save.</li>
+</ul>
+<p><img src="../../img/quick-start-8.png" alt="Image Alt"></p>
+<h2><a class="anchor" aria-hidden="true" id="create-components"></a><a href="#create-components" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create components</h2>
+<blockquote>
+<p><strong>What is a component ?</strong></p>
+<p>A component is the instance of one class of your model. You can define them graphically but you can of course create them with code (but do not forget to require the class before using it in that case, example: <em>const Jedi = this.require('Jedi')</em> ).</p>
+</blockquote>
+<ul>
+<li>click on the <strong>Components</strong> tab,</li>
+<li>click on the <strong>+</strong> button on the left toolbar,</li>
+<li>a new component is now created and appears in the <strong>Components</strong> list,</li>
+</ul>
+<p><img src="../../img/quick-start-9.png" alt="Image Alt"></p>
+<blockquote>
+<p><strong>What are the informations set by default ?</strong></p>
+<p>The component unique identifier <strong>_id</strong> (used to <em>require</em> the component) and the values of the <strong>attributes</strong>, <strong>links</strong> or <strong>collections</strong> of the model (set with their <strong>default</strong> property value).</p>
+</blockquote>
+<ul>
+<li>click on it,</li>
+<li>update the component with this:</li>
+</ul>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"vader"</span>,
+  <span class="hljs-attr">"father"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Darth"</span>,
+  <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Vader"</span>
+}
+</code></pre>
+<ul>
+<li>save,</li>
+</ul>
+<p><img src="../../img/quick-start-10.png" alt="Image Alt"></p>
+<ul>
+<li>click again on the <strong>+</strong> button on the left toolbar,</li>
+<li>a new component is now created and appears in the <strong>Components</strong> list,</li>
+<li>click on it,</li>
+<li>update the component with this:</li>
+</ul>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"luke"</span>,
+  <span class="hljs-attr">"father"</span>: <span class="hljs-string">"vader"</span>,
+  <span class="hljs-attr">"firstName"</span>: <span class="hljs-string">"Luke"</span>,
+  <span class="hljs-attr">"lastName"</span>: <span class="hljs-string">"Skywalker"</span>
+}
+</code></pre>
+<ul>
+<li>save.</li>
+</ul>
+<p><img src="../../img/quick-start-11.png" alt="Image Alt"></p>
+<blockquote>
+<p><strong>What has be done ?</strong></p>
+<p>In this example we have: - created a <em>Jedi</em> component that has for <em>id</em> <strong>vader</strong> and - created a <em>Jedi</em> component that has for id <strong>luke</strong>, in this component we set the value of <strong>father</strong> link property with the <em>id</em> of the related <em>Jedi</em> component, <strong>vader</strong>.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="add-code-on-the-start-method-of-the-system"></a><a href="#add-code-on-the-start-method-of-the-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add code on the start method of the system</h2>
+<blockquote>
+<p>The <strong>start</strong> method of your system is the entry point of your system. It is there that you put the business logic of your system.</p>
+</blockquote>
+<ul>
+<li>click on the <strong>Behaviors</strong> tab,</li>
+<li>click on <em>StarWars</em> on the right,</li>
+<li>click on the element who has got a <strong>start</strong> method,</li>
+</ul>
+<p><img src="../../img/quick-start-12.png" alt="Image Alt"></p>
+<ul>
+<li>update the action with this:</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">start</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">let</span> luke = <span class="hljs-literal">null</span>,
+      logger = <span class="hljs-literal">null</span>;
+
+  <span class="hljs-comment">// get logger component</span>
+  logger = <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'logger'</span>);
+
+  <span class="hljs-comment">// get luke component</span>
+  luke = <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'luke'</span>);
+
+  <span class="hljs-comment">// get the name of the father of Luke</span>
+  logger.info(luke.father().fullName());
+}
+</code></pre>
+<ul>
+<li>save.</li>
+</ul>
+<p><img src="../../img/quick-start-13.png" alt="Image Alt"></p>
+<blockquote>
+<p>in <em>start</em> method <strong>this</strong> refers to the current system.</p>
+<p><strong>What is a logger component ?</strong></p>
+<p>A <strong>logger</strong> component is available to log messages in System Designer.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="run-the-system"></a><a href="#run-the-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run the system</h2>
+<ul>
+<li>click on the run button on the left (the 2nd button from the top),</li>
+<li>a new window informing you that your system is running will open and</li>
+</ul>
+<p><img src="../../img/quick-start-12-run.png" alt="Image Alt"></p>
+<blockquote>
+<p>Your system is in fact running by a runtime, <a href="https://designfirst.io/systemruntime/">System Runtime</a>, in this new window. All the messages and logs from your system will be then send to System Designer.</p>
+</blockquote>
+<ul>
+<li>click on the <strong>Logs</strong> tab to see all the logs send by the runtime.</li>
+</ul>
+<p><img src="../../img/quick-start-12-logs.png" alt="Image Alt"></p>
+<blockquote>
+<p>You will also get there the traces of your system that is executed. You will have a log everytime a component is created, updated or deleted at runtime.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="view-the-class-diagram-of-your-system"></a><a href="#view-the-class-diagram-of-your-system" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>View the class diagram of your system</h2>
+<blockquote>
+<p><strong>Version compatibility</strong></p>
+<p>This feature is only available on the <strong>Windows</strong>, <strong>macOS</strong>, <strong>Linux</strong> and <strong>PWA</strong> versions of <em>System Designer</em>.</p>
+</blockquote>
+<ul>
+<li>just click on the corresponding button in the toolbar (the 5th button from the top)</li>
+</ul>
+<p><img src="../../img/quick-start-12-graph.png" alt="Image Alt"></p>
+<p>Then a new window will open and you will see the class diagram of your system.</p>
+<p><img src="../../img/quick-start-14.png" alt="Image Alt"></p>
+<p>You will be able to:</p>
+<ul>
+<li>zoom in/out or</li>
+<li>move the diagram to explore the model.</li>
+</ul>
+<blockquote>
+<p>You can also view the <strong>Component diagram</strong> and <strong>Graph diagram</strong> (if your system is a Graph) of your system.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="use-your-system-client-side"></a><a href="#use-your-system-client-side" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use your system client side</h2>
+<blockquote>
+<p><strong>Version compatibility</strong></p>
+<p>This feature is only available on the <strong>Windows</strong>, <strong>macOS</strong>, <strong>Linux</strong> and <strong>PWA</strong> versions of <em>System Designer</em>.</p>
+</blockquote>
+<ul>
+<li>click on the export button,</li>
+<li>select <strong>HTML</strong>,</li>
+<li>your system will be exported in a HTML file,</li>
+<li>load the page and</li>
+<li>open the console of your browser to see the result.</li>
+</ul>
+<blockquote>
+<p>You can also export your system into a JSON bundle and then import it in another web application.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="use-your-system-server-side"></a><a href="#use-your-system-server-side" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use your system server side</h2>
+<blockquote>
+<p><strong>Version compatibility</strong></p>
+<p>This feature is only available on the <strong>Windows</strong>, <strong>macOS</strong>, <strong>Linux</strong> and <strong>PWA</strong> versions of <em>System Designer</em>.</p>
+</blockquote>
+<ul>
+<li>click on the export button,</li>
+<li>select <strong>Node.js</strong>,</li>
+<li>your system will be exported in a JavaScript file,</li>
+<li>save the file on your server project,</li>
+<li>in your project, install this package to run your system:</li>
+</ul>
+<pre><code class="hljs css language-shell">npm install system-runtime --save
+</code></pre>
+<ul>
+<li>run your system:</li>
+</ul>
+<pre><code class="hljs css language-shell">node StarWars.js
+</code></pre>
+<blockquote>
+<p>You can also export your system into a JSON bundle and then import it in another server application.</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../../docs/pt-BR/what-is-design-first.html"><span class="arrow-prev">← </span><span>O que é Design First?</span></a><a class="docs-next button" href="../../docs/pt-BR/quick-start-videos.html"><span>Quick Start in videos</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#o-que-é-um-sistema">O que é um sistema?</a></li><li><a href="#what-is-the-system-that-we-will-create-">What is the system that we will create ?</a></li><li><a href="#create-a-system">Create a system</a></li><li><a href="#create-a-schema">Create a schema</a></li><li><a href="#edit-a-model">Edit a model</a></li><li><a href="#add-a-behavior">Add a behavior</a></li><li><a href="#create-components">Create components</a></li><li><a href="#add-code-on-the-start-method-of-the-system">Add code on the start method of the system</a></li><li><a href="#run-the-system">Run the system</a></li><li><a href="#view-the-class-diagram-of-your-system">View the class diagram of your system</a></li><li><a href="#use-your-system-client-side">Use your system client side</a></li><li><a href="#use-your-system-server-side">Use your system server side</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2024 Erwan Carriou</section></footer></div></body></html>

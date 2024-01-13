@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="sv-SE"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Edit a model · System Designer</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="A model is the UML representation of the class that you will use in your system. You can edit these models and update many informations (type, default value, ...)."/><meta name="docsearch:language" content="sv-SE"/><meta property="og:title" content="Edit a model · System Designer"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io../../index.html"/><meta property="og:description" content="A model is the UML representation of the class that you will use in your system. You can edit these models and update many informations (type, default value, ...)."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="../../img/favicon.ico"/><link rel="stylesheet" href="../../css/zenburn.css"/><script type="text/javascript" src="../../js/links.js"></script><script type="text/javascript" src="../../js/clipboard.js"></script><script type="text/javascript" src="../../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="../../js/scrollSpy.js"></script><link rel="stylesheet" href="../../css/main.css"/><script src="../../js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="../../sv-SE"><img class="logo" src="../../img/logo.png" alt="System Designer"/><h2 class="headerTitleWithLogo">System Designer</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="../../img/language.svg" alt="Languages icon"/>Svenska</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="../../docs/en/edit-a-model.html">English</a></li><li><a href="../../docs/el-GR/edit-a-model.html">Ελληνικά</a></li><li><a href="../../docs/pt-BR/edit-a-model.html">Português (Brasil)</a></li><li><a href="../../docs/zh-TW/edit-a-model.html">繁體中文</a></li><li><a href="https://crowdin.com/project/system-designer" target="_blank" rel="noreferrer noopener">Help Translate</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/what-is-system-designer.html">What is System Designer?</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/what-is-design-first.html">What is Design First?</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/quick-start.html">Quick Start</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/quick-start-videos.html">Quick Start in videos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/create-a-system.html">Create a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/create-a-schema.html">Create a Schema</a></li><li class="navListItem navListItemActive"><a class="navItem" href="../../docs/sv-SE/edit-a-model.html">Edit a model</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/create-a-behavior.html">Create a Behavior</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/create-a-type.html">Create a Type</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/create-a-component.html">Create a Component</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/run-your-system.html">Run your System</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/export-a-system.html">Export a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/import-a-system.html">Import a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/generate-a-diagram.html">Generate a diagram</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/sync-your-system-with-github.html">Sync your systems with GitHub</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/design-a-remote-client-system.html">Design a remote client system</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/design-a-remote-server-system.html">Design a remote server system</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/manage-extensions.html">Hantera tillägg</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/extend-system-designer.html">Extend System Designer</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/shortcuts.html">Shortcuts</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/list-examples.html">List of Examples</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/bundle-your-css.html">Bundle your CSS</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/bundle-your-javascript.html">Bundle your JavaScript</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/bundle-your-html.html">Bundle your HTML</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/test-a-server-side-application.html">Test a server-side application</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/create-a-npm-module.html">Create a NPM module</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/create-a-website.html">Create a website</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/listen-to-a-model-event.html">Lyssna efter en modellhändelse</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/listen-to-a-data-store-event.html">Listen to a data store event</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/send-messages.html">Send messages</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/send-messages-to-other-systems.html">Send messages to other systems</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/create-an-extension.html">Create an extension</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/generate-a-model-from-a-json-file.html">Generate a model from a JSON file</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/create-a-graph-system.html">Create a Graph system</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Articles</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/articles-about-the-project.html">Articles about the project</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/who-is-behind-system-designer.html">Who is behind System Designer?</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/privacy-policy.html">Privacy Policy</a></li><li class="navListItem"><a class="navItem" href="../../docs/sv-SE/license.html">License</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/system-designer/sv-SE" target="_blank" rel="noreferrer noopener">Translate</a><h1 id="__docusaurus" class="postHeaderTitle">Edit a model</h1></header><article><div><span><p>A model is the UML representation of the class that you will use in your system. You can edit these models and update many informations (type, default value, ...).</p>
+<h2><a class="anchor" aria-hidden="true" id="view-your-models"></a><a href="#view-your-models" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>View your models</h2>
+<p>To vies your models in System Designer:</p>
+<ul>
+<li>click on the <strong>Models</strong> tab and</li>
+<li>you will see all the generated models.</li>
+</ul>
+<p><img src="../../img/edit-a-model.png" alt="Image Alt"></p>
+<h2><a class="anchor" aria-hidden="true" id="edit-a-model"></a><a href="#edit-a-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit a model</h2>
+<ul>
+<li>click on a model,</li>
+<li>an editor will open the content of the model,</li>
+<li>you can now edit its properties by updating its configuration:</li>
+</ul>
+<p><img src="../../img/edit-a-model-edit.png" alt="Image Alt"></p>
+<h2><a class="anchor" aria-hidden="true" id="what-is-a-configuration"></a><a href="#what-is-a-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is a configuration?</h2>
+<p>A configuration is an object that defines the behavior of a property / link / collection / method / event of a model.</p>
+<blockquote>
+<p><strong>What types can be set in models?</strong></p>
+<p><em>System Designer</em> manages by default these types: - <strong>boolean</strong>, <strong>string</strong>, <strong>number</strong>, <strong>array</strong>, <strong>date</strong>: standard types, - <strong>object</strong>: for non typed object, - <strong>css</strong>, <strong>html</strong>, <strong>javascript</strong>, <strong>json</strong>, <strong>text</strong>: for live editing of CSS, HTML, JavaScript, JSON or a text and - <strong>any</strong>: for any kind of type.</p>
+<p>You can also define: - your own type (enum typed or typed object) or - a model.</p>
+<p><strong>What is the default value for a date?</strong></p>
+<p>The default value of a date must be a valid date converted to ISO.</p>
+<p>Example: <em>&quot;1970-01-01T00:00:00.000Z&quot;</em> can be used as a default value to represent 01/01/1970.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="edit-a-property"></a><a href="#edit-a-property" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit a property</h2>
+<p>When you define in the schema a <strong>property</strong>, a configuration will be then added in the model. For example, if you have added in the schema:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"c04bbcea-d1ec-43f0-be52-c7f1bf3120f5"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"property"</span>
+}
+</code></pre>
+<p>A new configuration will be then generated in the model:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"fbb6878d-c7af-4997-a717-0a42cbc6edb0"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"_description"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"name"</span>: {
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"any"</span>,
+    <span class="hljs-attr">"readOnly"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"default"</span>: <span class="hljs-string">""</span>
+  }
+}
+</code></pre>
+<p>This new property has <strong>any</strong> type, it can be updated, it is not mandatory and has <strong>&quot;&quot;</strong> for default value. You can then edit all this configuration.</p>
+<p>In the configuration object of a <em>property</em> you have:</p>
+<ul>
+<li><strong>description : string</strong>, comments about the property.</li>
+<li><strong>type : string|array</strong>, the type to the property.</li>
+<li><strong>readOnly : boolean</strong>, <em>true</em> if we can change the value of a property after its initialization.</li>
+<li><strong>mandatory : boolean</strong>, <em>true</em> if the property is mandatory when creating an instance of the model.</li>
+<li><strong>default: any</strong>, default value of the property. It needs to have the type defined in <strong>type</strong> property.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="edit-a-link"></a><a href="#edit-a-link" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit a link</h2>
+<p>When you define in the schema a <strong>link</strong>, a configuration will be then added in the model. For example, if you have added in the schema:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"c04bbcea-d1ec-43f0-be52-c7f1bf3120f5"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"father"</span>: <span class="hljs-string">"link"</span>
+}
+</code></pre>
+<p>A new configuration will be then generated in the model:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"fbb6878d-c7af-4997-a717-0a42cbc6edb0"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"_description"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"father"</span>: {
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"_Component"</span>,
+    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"normal"</span>,
+    <span class="hljs-attr">"readOnly"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"default"</span>: <span class="hljs-string">""</span>
+  }
+}
+</code></pre>
+<p>This new link has <strong>_Component</strong> type (it means that it can be any kind of component), it can be updated, it is not mandatory and has <strong>&quot;&quot;</strong> for default value. You can then edit all this configuration.</p>
+<p>In the configuration object of a <em>link</em> you have:</p>
+<ul>
+<li><strong>description : string</strong>, comments about the link.</li>
+<li><strong>type : string|array</strong>, the type to the link.</li>
+<li><strong>kind : [normal|dependency|aggregation|composition]</strong>, the kind of relationship. It is used only in the Class diagram to specify the kind of link to show.</li>
+<li><strong>readOnly : boolean</strong>, <em>true</em> if we can change the value of a link after its initialization.</li>
+<li><strong>mandatory : boolean</strong>, <em>true</em> if the link is mandatory when creating an instance of the model.</li>
+<li><strong>default: any</strong>, default value of the link. It needs to have the type defined in <strong>type</strong> property.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="edit-a-collection"></a><a href="#edit-a-collection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit a collection</h2>
+<p>When you define in the schema a <strong>collection</strong>, a configuration will be then added in the model. For example, if you have added in the schema:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"c04bbcea-d1ec-43f0-be52-c7f1bf3120f5"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"children"</span>: <span class="hljs-string">"collection"</span>
+}
+</code></pre>
+<p>A new configuration will be then generated in the model:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"fbb6878d-c7af-4997-a717-0a42cbc6edb0"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"_description"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"children"</span>: {
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"type"</span>: [<span class="hljs-string">"_Component"</span>],
+    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"normal"</span>,
+    <span class="hljs-attr">"readOnly"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"default"</span>: []
+  }
+}
+
+</code></pre>
+<p>This new collection is a collection of <strong>_Component</strong> type (it means that it can be a collection of any kind of component), it can be updated, it is not mandatory and has <strong>[]</strong> for default value. You can then edit all this configuration.</p>
+<p>In the configuration object of a <em>collection</em> you have:</p>
+<ul>
+<li><strong>description : string</strong>, comments about the collection.</li>
+<li><strong>type : array</strong>, the type to the collection.</li>
+<li><strong>kind : [normal|dependency|aggregation|composition]</strong>, the kind of relationship. It is used only in the Class diagram to specify the kind of link to show.</li>
+<li><strong>readOnly : boolean</strong>, <em>true</em> if we can change the value of a collection after its initialization.</li>
+<li><strong>mandatory : boolean</strong>, <em>true</em> if the collection is mandatory when creating an instance of the model.</li>
+<li><strong>default: any</strong>, default value of the collection. It needs to have the type defined in <strong>type</strong> property.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="edit-a-method"></a><a href="#edit-a-method" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit a method</h2>
+<p>When you define in the schema a <strong>method</strong>, a configuration will be then added in the model. For example, if you have added in the schema:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"c04bbcea-d1ec-43f0-be52-c7f1bf3120f5"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"fullname"</span>: <span class="hljs-string">"method"</span>
+}
+</code></pre>
+<p>A new configuration will be then generated in the model:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"fbb6878d-c7af-4997-a717-0a42cbc6edb0"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"_description"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"fullname"</span>: {
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"params"</span>: [
+      {
+        <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"param"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"any"</span>,
+        <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"default"</span>: <span class="hljs-literal">null</span>
+      }
+    ],
+    <span class="hljs-attr">"result"</span>: <span class="hljs-string">"any"</span>
+  }
+}
+</code></pre>
+<p>This new method has one parameter, <strong>param</strong>, of type <strong>any</strong> that is not mandatory and has <strong>null</strong> for default value. This method returns a result of type <strong>any</strong>. You can then edit all this configuration.</p>
+<p>In the configuration object of a <em>method</em> you have:</p>
+<ul>
+<li><strong>description : string</strong>, comments about the method.</li>
+<li><strong>params : array</strong>, the parameters of the method. A parameter is defined by a configuration object that has for properties:
+<ul>
+<li><strong>description : string</strong>, comments about the parameter.</li>
+<li><strong>name : string</strong>, the name of the parameter.</li>
+<li><strong>type : string|array</strong>, the type of the parameter.</li>
+<li><strong>mandatory : boolean</strong>, <em>true</em> if the parameter is mandatory when invoking the method.</li>
+<li><strong>default: any</strong>, default value of the parameter. It needs to have the type defined in <strong>type</strong> property.</li>
+</ul></li>
+<li><strong>result : string|array</strong>, the type of the returned value.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="edit-an-event"></a><a href="#edit-an-event" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit an event</h2>
+<p>When you define in the schema an <strong>event</strong>, a configuration will be then added in the model. For example, if you have added in the schema:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"c04bbcea-d1ec-43f0-be52-c7f1bf3120f5"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"changed"</span>: <span class="hljs-string">"event"</span>
+}
+</code></pre>
+<p>A new configuration will be then generated in the model:</p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"fbb6878d-c7af-4997-a717-0a42cbc6edb0"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"Jedi"</span>,
+  <span class="hljs-attr">"_description"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"changed"</span>: {
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+    <span class="hljs-attr">"params"</span>: [
+      {
+        <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"param"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"any"</span>,
+        <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"default"</span>: <span class="hljs-literal">null</span>
+      }
+    ]
+  }
+}
+</code></pre>
+<p>This new event has one parameter, <strong>param</strong> of type <strong>any</strong> that is not mandatory and has <strong>null</strong> for default value. You can then edit all this configuration.</p>
+<p>In the configuration object of an <em>event</em> you have:</p>
+<ul>
+<li><strong>description : string</strong>, comments about the event.</li>
+<li><strong>params : array</strong>, the parameters of the event. A parameter is defined by a configuration object that has for properties:
+<ul>
+<li><strong>description : string</strong>, comments about the parameter.</li>
+<li><strong>name : string</strong>, the name of the parameter.</li>
+<li><strong>type : string|array</strong>, the type of the parameter.</li>
+<li><strong>mandatory : boolean</strong>, <em>true</em> if the parameter is mandatory when sending the event.</li>
+<li><strong>default: any</strong>, default value of the parameter. It needs to have the type defined in <strong>type</strong> property.</li>
+</ul></li>
+</ul>
+<blockquote>
+<p><strong>Want to know more?</strong></p>
+<p>For more information on model definition, go to the <a href="https://designfirst.io/systemruntime/documentation/docs/design-your-model.html">System Runtime documentation</a>.</p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../../docs/sv-SE/create-a-schema.html"><span class="arrow-prev">← </span><span>Create a Schema</span></a><a class="docs-next button" href="../../docs/sv-SE/create-a-behavior.html"><span>Create a Behavior</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#view-your-models">View your models</a></li><li><a href="#edit-a-model">Edit a model</a></li><li><a href="#what-is-a-configuration">What is a configuration?</a></li><li><a href="#edit-a-property">Edit a property</a></li><li><a href="#edit-a-link">Edit a link</a></li><li><a href="#edit-a-collection">Edit a collection</a></li><li><a href="#edit-a-method">Edit a method</a></li><li><a href="#edit-an-event">Edit an event</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2024 Erwan Carriou</section></footer></div></body></html>
