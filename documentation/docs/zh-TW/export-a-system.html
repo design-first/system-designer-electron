@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Export a System · System Designer</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&gt; **Version compatibility**"/><meta name="docsearch:language" content="zh-TW"/><meta property="og:title" content="Export a System · System Designer"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io../../index.html"/><meta property="og:description" content="&gt; **Version compatibility**"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="../../img/favicon.ico"/><link rel="stylesheet" href="../../css/zenburn.css"/><script type="text/javascript" src="../../js/links.js"></script><script type="text/javascript" src="../../js/clipboard.js"></script><script type="text/javascript" src="../../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="../../js/scrollSpy.js"></script><link rel="stylesheet" href="../../css/main.css"/><script src="../../js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="../../zh-TW"><img class="logo" src="../../img/logo.png" alt="System Designer"/><h2 class="headerTitleWithLogo">System Designer</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="../../img/language.svg" alt="Languages icon"/>繁體中文</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="../../docs/en/export-a-system.html">English</a></li><li><a href="../../docs/el-GR/export-a-system.html">Ελληνικά</a></li><li><a href="../../docs/pt-BR/export-a-system.html">Português (Brasil)</a></li><li><a href="../../docs/sv-SE/export-a-system.html">Svenska</a></li><li><a href="https://crowdin.com/project/system-designer" target="_blank" rel="noreferrer noopener">Help Translate</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/what-is-system-designer.html">What is System Designer?</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/what-is-design-first.html">What is Design First?</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/quick-start.html">Quick Start</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/quick-start-videos.html">Quick Start in videos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-system.html">Create a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-schema.html">創建一個模式</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/edit-a-model.html">Edit a model</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-behavior.html">Create a Behavior</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-type.html">Create a Type</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-component.html">Create a Component</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/run-your-system.html">Run your System</a></li><li class="navListItem navListItemActive"><a class="navItem" href="../../docs/zh-TW/export-a-system.html">Export a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/import-a-system.html">Import a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/generate-a-diagram.html">Generate a diagram</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/sync-your-system-with-github.html">Sync your systems with GitHub</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/design-a-remote-client-system.html">Design a remote client system</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/design-a-remote-server-system.html">Design a remote server system</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/manage-extensions.html">Manage Extensions</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/extend-system-designer.html">Extend System Designer</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/shortcuts.html">Shortcuts</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/list-examples.html">List of Examples</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/bundle-your-css.html">Bundle your CSS</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/bundle-your-javascript.html">Bundle your JavaScript</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/bundle-your-html.html">Bundle your HTML</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/test-a-server-side-application.html">Test a server-side application</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-npm-module.html">Create a NPM module</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-website.html">Create a website</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/listen-to-a-model-event.html">Listen to a model event</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/listen-to-a-data-store-event.html">Listen to a data store event</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/send-messages.html">Send messages</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/send-messages-to-other-systems.html">Send messages to other systems</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-an-extension.html">Create an extension</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/generate-a-model-from-a-json-file.html">Generate a model from a JSON file</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/create-a-graph-system.html">Create a Graph system</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Articles</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/articles-about-the-project.html">關於這個開源方案</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/who-is-behind-system-designer.html">Who is behind System Designer?</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/privacy-policy.html">Privacy Policy</a></li><li class="navListItem"><a class="navItem" href="../../docs/zh-TW/license.html">License</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/system-designer/zh-TW" target="_blank" rel="noreferrer noopener">Translate</a><h1 id="__docusaurus" class="postHeaderTitle">Export a System</h1></header><article><div><span><blockquote>
+<p><strong>Version compatibility</strong></p>
+<p>This feature is only available on the <strong>Windows</strong>, <strong>macOS</strong>, <strong>Linux</strong> and <strong>PWA</strong> versions of <em>System Designer</em>.</p>
+</blockquote>
+<p>You can export your system in many formats.</p>
+<h2><a class="anchor" aria-hidden="true" id="exportation"></a><a href="#exportation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exportation</h2>
+<p>To export a system just click on the <em>export</em> button (the icon with a square and an arrow to the bottom).</p>
+<p><img src="../../img/export-a-system-dialog.png" alt="Image Alt"></p>
+<p>You will able to export the system to:</p>
+<ul>
+<li>a <strong>JSON</strong> file,</li>
+<li>a <strong>JavaScript</strong> file,</li>
+<li>a <strong>HTML</strong> file,</li>
+<li>a <strong>Node.js</strong> file</li>
+<li>a <strong><a href="https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29">DOT</a></strong> file for <a href="https://graphviz.org">Graphviz</a> softwares.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="export-to-json"></a><a href="#export-to-json" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Export to JSON</h2>
+<p>When exporting a system to a <strong>JSON</strong> file you will able to <a href="import-a-system.html">import it in System Designer later or merge it to another system</a>.</p>
+<p>You can also <strong>install it in a client-side or server-side application</strong>.</p>
+<blockquote>
+<p><strong>What is the 'Core system' option?</strong></p>
+<p><strong>A system can be composed of another systems</strong>. It means that all schemas, models, behaviors and components of many systems can be merged in one system. We call the <strong>core</strong> system, the system in which we will merge other systems at runtime. So when exporting, you can set a system as <strong>Core system</strong>.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="use-this-json-in-a-html-file"></a><a href="#use-this-json-in-a-html-file" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use this JSON in a HTML file</h3>
+<ul>
+<li>create a valid HTML file</li>
+<li>copy the JSON file you get from the export near your HTML file</li>
+<li>then install the file with a <em>link</em> tag:</li>
+</ul>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"system"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/json"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mysystem.json"</span>&gt;</span>
+</code></pre>
+<ul>
+<li>add this <em>script</em> tag to install <a href="https://designfirst.io/systemruntime/">System Runtime</a>:</li>
+</ul>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/system-runtime/dist/system-runtime.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p><strong>What will happen?</strong></p>
+<p><a href="https://designfirst.io/systemruntime/">System Runtime</a> will install the system on the load of the page.</p>
+</blockquote>
+<p>Example:</p>
+<pre><code class="hljs css language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>App<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"system"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/json"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mysystem.json"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/system-runtime/dist/system-runtime.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p><strong>How to change the log level?</strong></p>
+<p>By default the log level is at <strong>warning</strong> level, to change that, just add the property <strong>level</strong> on the script tag.</p>
+</blockquote>
+<p>Example:</p>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">level</span>=<span class="hljs-string">"info"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/system-runtime/dist/system-runtime.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="use-this-json-on-a-server-application"></a><a href="#use-this-json-on-a-server-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use this JSON on a server application</h3>
+<p>First, you need to install <a href="https://designfirst.io/systemruntime/">System Runtime</a> server-side:</p>
+<pre><code class="hljs css language-shell">npm install system-runtime --save
+</code></pre>
+<blockquote>
+<p><strong>Want to know more about Node?</strong></p>
+<p><a href="https://designfirst.io/systemruntime/">System Runtime</a> is available as a <a href="https://www.npmjs.com/package/system-runtime">node package</a>. To learn mode about Node, go to this <a href="https://nodejs.org">webpage</a>.</p>
+</blockquote>
+<p>Copy the JSON file you get from the export in your project. Create a new file (<em>mysystem.js</em> for example) and call the <strong>install</strong> method of <em>runtime</em>:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> runtime = <span class="hljs-built_in">require</span>(<span class="hljs-string">'system-runtime'</span>);
+
+<span class="hljs-comment">// install and start the system</span>
+runtime.install(<span class="hljs-string">'mysystem.json'</span>);
+</code></pre>
+<p>Now execute your file:</p>
+<pre><code class="hljs css language-shell">node mysystem.js
+</code></pre>
+<p><a href="https://designfirst.io/systemruntime/">System Runtime</a> will install the system and run it.</p>
+<h3><a class="anchor" aria-hidden="true" id="use-this-json-in-a-web-application"></a><a href="#use-this-json-in-a-web-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use this JSON in a web application</h3>
+<ul>
+<li>copy the JSON file you get from the export into your existing web application</li>
+<li>add <a href="https://designfirst.io/systemruntime/">System Runtime</a> to your application:</li>
+</ul>
+<pre><code class="hljs css language-shell">npm i system-runtime --save
+</code></pre>
+<ul>
+<li>import it in your application:</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">import</span> runtime <span class="hljs-keyword">from</span> <span class="hljs-string">'system-runtime'</span>;
+</code></pre>
+<ul>
+<li>import your system:</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">import</span> system <span class="hljs-keyword">from</span> <span class="hljs-string">'./mysystem'</span>;
+</code></pre>
+<ul>
+<li>then in your script, install your system:</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// set the level of log to see the logs</span>
+runtime.require(<span class="hljs-string">'logger'</span>).level(<span class="hljs-string">'info'</span>);
+<span class="hljs-comment">// install and run the system</span>
+runtime.install(system);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="export-to-javascript"></a><a href="#export-to-javascript" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Export to JavaScript</h2>
+<p>When exporting a system to a <strong>JavaScript</strong> file you will able to run it client-side and server-side.</p>
+<h3><a class="anchor" aria-hidden="true" id="use-this-javascript-on-a-client-application"></a><a href="#use-this-javascript-on-a-client-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use this JavaScript on a client application</h3>
+<ul>
+<li>create a valid HTML file</li>
+<li>add this <em>script</em> tag to install <a href="https://designfirst.io/systemruntime/">System Runtime</a>:</li>
+</ul>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/system-runtime/dist/system-runtime.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<ul>
+<li>copy the JavaScript file you get from the export near your HTML file</li>
+<li>then install the file with a <em>script</em> tag:</li>
+</ul>
+<pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"mysystem.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>Example:</p>
+<pre><code class="hljs css language-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>App<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1.0"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/system-runtime/dist/system-runtime.min.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"mysytem.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="use-this-javascript-on-a-server-application"></a><a href="#use-this-javascript-on-a-server-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use this JavaScript on a server application</h3>
+<p>First, you need to install <a href="https://designfirst.io/systemruntime/">System Runtime</a> server-side:</p>
+<pre><code class="hljs css language-shell">npm install system-runtime --save
+</code></pre>
+<p>Open the exported script and uncomment this line:</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> runtime = <span class="hljs-built_in">require</span>(<span class="hljs-string">'system-runtime'</span>);
+</code></pre>
+<p>Now execute your file:</p>
+<pre><code class="hljs css language-shell">node mysystem.js
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="export-to-html"></a><a href="#export-to-html" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Export to HTML</h2>
+<p>If you choose <strong>HTML</strong> type of exportation, your system will be packaged in a HTML file. You will just need to open the exported webpage with a browser to execute your system.</p>
+<h2><a class="anchor" aria-hidden="true" id="export-to-nodejs"></a><a href="#export-to-nodejs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Export to Node.js</h2>
+<p>If you choose <strong>Node.js</strong> type of exportation, your system will be packaged in a Javascript file ready to be used in Node.</p>
+<p>To execute it, you need first to install <a href="https://designfirst.io/systemruntime/">System Runtime</a> server-side:</p>
+<pre><code class="hljs css language-shell">npm install system-runtime --save
+</code></pre>
+<p>Then execute your file:</p>
+<pre><code class="hljs css language-shell">node mysystem.js
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="export-to-graphviz"></a><a href="#export-to-graphviz" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Export to Graphviz</h2>
+<p>If you choose <strong><a href="https://graphviz.org">Graphviz</a></strong> type of exportation, your system will be packaged in a <a href="https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29">DOT</a> file. You will be able then to edit it and open it with all diagram tools that can open this kind of file.</p>
+<blockquote>
+<p>You can preview the diagram of an external DOT file by dropping it in the Class Diagram viewer.</p>
+</blockquote>
+<p><img src="../../img/export-a-system-diagram.png" alt="Image Alt"></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../../docs/zh-TW/run-your-system.html"><span class="arrow-prev">← </span><span>Run your System</span></a><a class="docs-next button" href="../../docs/zh-TW/import-a-system.html"><span>Import a System</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#exportation">Exportation</a></li><li><a href="#export-to-json">Export to JSON</a><ul class="toc-headings"><li><a href="#use-this-json-in-a-html-file">Use this JSON in a HTML file</a></li><li><a href="#use-this-json-on-a-server-application">Use this JSON on a server application</a></li><li><a href="#use-this-json-in-a-web-application">Use this JSON in a web application</a></li></ul></li><li><a href="#export-to-javascript">Export to JavaScript</a><ul class="toc-headings"><li><a href="#use-this-javascript-on-a-client-application">Use this JavaScript on a client application</a></li><li><a href="#use-this-javascript-on-a-server-application">Use this JavaScript on a server application</a></li></ul></li><li><a href="#export-to-html">Export to HTML</a></li><li><a href="#export-to-nodejs">Export to Node.js</a></li><li><a href="#export-to-graphviz">Export to Graphviz</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2024 Erwan Carriou</section></footer></div></body></html>

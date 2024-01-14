@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Send messages to other systems · System Designer</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this tutorial we will show how to send messages from one system to another system with channels."/><meta name="docsearch:language" content="pt-BR"/><meta property="og:title" content="Send messages to other systems · System Designer"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io../../index.html"/><meta property="og:description" content="In this tutorial we will show how to send messages from one system to another system with channels."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="../../img/favicon.ico"/><link rel="stylesheet" href="../../css/zenburn.css"/><script type="text/javascript" src="../../js/links.js"></script><script type="text/javascript" src="../../js/clipboard.js"></script><script type="text/javascript" src="../../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="../../js/scrollSpy.js"></script><link rel="stylesheet" href="../../css/main.css"/><script src="../../js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="../../pt-BR"><img class="logo" src="../../img/logo.png" alt="System Designer"/><h2 class="headerTitleWithLogo">System Designer</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="../../img/language.svg" alt="Languages icon"/>Português (Brasil)</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="../../docs/en/send-messages-to-other-systems.html">English</a></li><li><a href="../../docs/el-GR/send-messages-to-other-systems.html">Ελληνικά</a></li><li><a href="../../docs/sv-SE/send-messages-to-other-systems.html">Svenska</a></li><li><a href="../../docs/zh-TW/send-messages-to-other-systems.html">繁體中文</a></li><li><a href="https://crowdin.com/project/system-designer" target="_blank" rel="noreferrer noopener">Help Translate</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Tutorials</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/what-is-system-designer.html">What is System Designer?</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/what-is-design-first.html">O que é Design First?</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/quick-start.html">Quick Start</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/quick-start-videos.html">Quick Start in videos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-system.html">Create a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-schema.html">Create a Schema</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/edit-a-model.html">Edit a model</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-behavior.html">Create a Behavior</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-type.html">Create a Type</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-component.html">Create a Component</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/run-your-system.html">Run your System</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/export-a-system.html">Export a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/import-a-system.html">Import a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/generate-a-diagram.html">Generate a diagram</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/sync-your-system-with-github.html">Sync your systems with GitHub</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/design-a-remote-client-system.html">Design a remote client system</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/design-a-remote-server-system.html">Design a remote server system</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/manage-extensions.html">Manage Extensions</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/extend-system-designer.html">Extend System Designer</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/shortcuts.html">Shortcuts</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/list-examples.html">List of Examples</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/bundle-your-css.html">Bundle your CSS</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/bundle-your-javascript.html">Bundle your JavaScript</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/bundle-your-html.html">Bundle your HTML</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/test-a-server-side-application.html">Test a server-side application</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-npm-module.html">Create a NPM module</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-website.html">Create a website</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/listen-to-a-model-event.html">Listen to a model event</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/listen-to-a-data-store-event.html">Listen to a data store event</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/send-messages.html">Send messages</a></li><li class="navListItem navListItemActive"><a class="navItem" href="../../docs/pt-BR/send-messages-to-other-systems.html">Send messages to other systems</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-an-extension.html">Create an extension</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/generate-a-model-from-a-json-file.html">Generate a model from a JSON file</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-graph-system.html">Create a Graph system</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Articles</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/articles-about-the-project.html">Articles about the project</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/who-is-behind-system-designer.html">Quem está por trás do System Designer?</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/privacy-policy.html">Privacy Policy</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/license.html">License</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/system-designer/pt-BR" target="_blank" rel="noreferrer noopener">Translate</a><h1 id="__docusaurus" class="postHeaderTitle">Send messages to other systems</h1></header><article><div><span><p>In this tutorial we will show how to send messages from one system to another system with channels.</p>
+<blockquote>
+<p>At runtime a <strong>channel</strong> component is defined to send / receive messages between systems</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="define-your-messages"></a><a href="#define-your-messages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define your messages</h2>
+<p>After creating your system:</p>
+<ul>
+<li>click on the <strong>import</strong> button on the left toolbar,</li>
+<li>a dialog is shown,</li>
+<li>click on <strong>from the library</strong> radio button,</li>
+<li>select <strong>Send messages through a channel</strong> from the proposed systems,</li>
+<li>click on the <strong>Compose</strong> button,</li>
+</ul>
+<p><img src="../../img/send-messages-to-other-systems.png" alt="Image Alt"></p>
+<p>This system has now been composed in your system.</p>
+<ul>
+<li>on <strong>Schemas</strong> tab, click on <strong>_Channel</strong> schema (on the right panel under <em>Schemas</em>),</li>
+<li>click on <strong>_Channel</strong> schema to edit it,</li>
+<li>add <strong>somethingHappened</strong> event:</li>
+</ul>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"104ad1f48518376"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"_Channel"</span>,
+  <span class="hljs-attr">"_inherit"</span>: [
+    <span class="hljs-string">"_Component"</span>
+  ],
+  <span class="hljs-attr">"send"</span>: <span class="hljs-string">"event"</span>,
+  <span class="hljs-attr">"somethingHappened"</span>: <span class="hljs-string">"event"</span>
+}
+</code></pre>
+<ul>
+<li>on <strong>Models</strong> tab, click on <strong>_Channel</strong> model (on the right panel under <em>Models</em>),</li>
+<li>click on <strong>_Channel</strong> model to edit it</li>
+</ul>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"_id"</span>: <span class="hljs-string">"135c71078810af2"</span>,
+  <span class="hljs-attr">"_name"</span>: <span class="hljs-string">"_Channel"</span>,
+  <span class="hljs-attr">"send"</span>: {
+    <span class="hljs-attr">"params"</span>: [
+      {
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"message"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"message"</span>
+      }
+  ]
+  },
+  <span class="hljs-attr">"somethingHappened"</span>: {
+    <span class="hljs-attr">"params"</span>: [
+      {
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"param"</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"any"</span>,
+        <span class="hljs-attr">"mandatory"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"default"</span>: <span class="hljs-string">""</span>
+      }
+    ]
+  }
+}
+</code></pre>
+<p>We let the default values.</p>
+<h2><a class="anchor" aria-hidden="true" id="define-how-to-send-the-message"></a><a href="#define-how-to-send-the-message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Define how to send the message</h2>
+<ul>
+<li>on <strong>Behaviors</strong> tab, click on <strong>_Channel</strong> model (on the right panel under <em>Models</em>),</li>
+<li>click on the <strong>send</strong> behavior to edit it,</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">send</span>(<span class="hljs-params">message</span>) </span>{ 
+  <span class="hljs-comment">// define here how to send the message to another channel (webRTC, XHR, ...)</span>
+  <span class="hljs-comment">// example</span>
+  fetch(<span class="hljs-string">'url_to_a_server'</span>, {
+    <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+    <span class="hljs-attr">headers</span>: <span class="hljs-keyword">new</span> Headers({
+      <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>,
+      <span class="hljs-string">'X-System-Id'</span>: message.from, <span class="hljs-comment">// current system id (string value)</span>
+      <span class="hljs-string">'X-System-Event'</span>: message.event <span class="hljs-comment">// event name (string value)</span>
+    }),
+    <span class="hljs-attr">body</span>: message.data <span class="hljs-comment">// arguments send to the event (array value)</span>
+  });
+}
+</code></pre>
+<p>Define in this behavior how to send the message to another channel (webRTC, XHR, ...).</p>
+<h2><a class="anchor" aria-hidden="true" id="send-a-message"></a><a href="#send-a-message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Send a message</h2>
+<ul>
+<li>edit the behavior in which you want to send a message to another channel,</li>
+<li>require the <strong>channel</strong> component,</li>
+<li>call the event you have defined, <strong>somethingHappened</strong> and</li>
+<li>pass as parameter a string (as defined in the model).</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">this</span>.require(<span class="hljs-string">'channel'</span>).somethingHappened(<span class="hljs-string">'my message'</span>);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="listen-to-a-message"></a><a href="#listen-to-a-message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Listen to a message</h2>
+<ul>
+<li>create another system,</li>
+<li>do all the steps of part <strong>Define your messages</strong>,</li>
+<li>edit the behavior in which you want to listen to a message send from another channel (send via webRTC, XHR, ...),</li>
+<li>require <strong>runtime</strong> component,</li>
+<li>call the <strong>message</strong> method and</li>
+<li>pass an object that contains the information send by the other system:</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-comment">// we suppose that this system runs on a server and</span>
+<span class="hljs-comment">// get the header and body of the request send by the other system</span>
+
+<span class="hljs-keyword">this</span>.require(<span class="hljs-string">'runtime'</span>).message({
+  <span class="hljs-string">'event'</span>: headers[<span class="hljs-string">'x-system-event'</span>], <span class="hljs-comment">// 'somethingHappened' (string value)</span>
+  <span class="hljs-string">'from'</span>: headers[<span class="hljs-string">'x-system-id'</span>], <span class="hljs-comment">// system id of the system that send the message (string value)</span>
+  <span class="hljs-string">'data'</span>: body <span class="hljs-comment">// the arguments send by event (array value)</span>
+);
+</code></pre>
+<ul>
+<li>then click on <strong>channel</strong> component (on the right panel under <em>Components</em>),</li>
+<li>click on the '<em>+</em>' button on the left toolbar to add a behavior,</li>
+<li>select <em>somethingHappened</em> from the list,</li>
+<li>click on the <em>Create</em> button,</li>
+<li>click on the <strong>somethingHappened</strong> behavior to edit it,</li>
+<li>add this code:</li>
+</ul>
+<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">somethingHappened</span>(<span class="hljs-params">param</span>) </span>{ 
+  <span class="hljs-comment">// get logger component</span>
+  <span class="hljs-keyword">let</span> logger = <span class="hljs-keyword">this</span>.require(<span class="hljs-string">'logger'</span>);
+
+  logger.info(<span class="hljs-string">'the message '</span> + param + <span class="hljs-string">' has been send to this system'</span>);
+}
+</code></pre>
+<p>Now your system is able to listen to an event send by the other system.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../../docs/pt-BR/send-messages.html"><span class="arrow-prev">← </span><span>Send messages</span></a><a class="docs-next button" href="../../docs/pt-BR/create-an-extension.html"><span>Create an extension</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#define-your-messages">Define your messages</a></li><li><a href="#define-how-to-send-the-message">Define how to send the message</a></li><li><a href="#send-a-message">Send a message</a></li><li><a href="#listen-to-a-message">Listen to a message</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2024 Erwan Carriou</section></footer></div></body></html>

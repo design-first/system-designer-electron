@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Create an extension · System Designer</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this tutorial we will show how to create an extension in System Designer."/><meta name="docsearch:language" content="pt-BR"/><meta property="og:title" content="Create an extension · System Designer"/><meta property="og:type" content="website"/><meta property="og:url" content="https://designfirst.io../../index.html"/><meta property="og:description" content="In this tutorial we will show how to create an extension in System Designer."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="../../img/favicon.ico"/><link rel="stylesheet" href="../../css/zenburn.css"/><script type="text/javascript" src="../../js/links.js"></script><script type="text/javascript" src="../../js/clipboard.js"></script><script type="text/javascript" src="../../js/copy.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="../../js/scrollSpy.js"></script><link rel="stylesheet" href="../../css/main.css"/><script src="../../js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="../../pt-BR"><img class="logo" src="../../img/logo.png" alt="System Designer"/><h2 class="headerTitleWithLogo">System Designer</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="../../img/language.svg" alt="Languages icon"/>Português (Brasil)</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="../../docs/en/create-an-extension.html">English</a></li><li><a href="../../docs/el-GR/create-an-extension.html">Ελληνικά</a></li><li><a href="../../docs/sv-SE/create-an-extension.html">Svenska</a></li><li><a href="../../docs/zh-TW/create-an-extension.html">繁體中文</a></li><li><a href="https://crowdin.com/project/system-designer" target="_blank" rel="noreferrer noopener">Help Translate</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Tutorials</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Introduction</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/what-is-system-designer.html">What is System Designer?</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/what-is-design-first.html">O que é Design First?</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/quick-start.html">Quick Start</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/quick-start-videos.html">Quick Start in videos</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Guides</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/installation.html">Installation</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-system.html">Create a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-schema.html">Create a Schema</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/edit-a-model.html">Edit a model</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-behavior.html">Create a Behavior</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-type.html">Create a Type</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-component.html">Create a Component</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/run-your-system.html">Run your System</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/export-a-system.html">Export a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/import-a-system.html">Import a System</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/generate-a-diagram.html">Generate a diagram</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/sync-your-system-with-github.html">Sync your systems with GitHub</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/design-a-remote-client-system.html">Design a remote client system</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/design-a-remote-server-system.html">Design a remote server system</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/manage-extensions.html">Manage Extensions</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/extend-system-designer.html">Extend System Designer</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/shortcuts.html">Shortcuts</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Tutorials</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/list-examples.html">List of Examples</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/bundle-your-css.html">Bundle your CSS</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/bundle-your-javascript.html">Bundle your JavaScript</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/bundle-your-html.html">Bundle your HTML</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/test-a-server-side-application.html">Test a server-side application</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-npm-module.html">Create a NPM module</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-website.html">Create a website</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/listen-to-a-model-event.html">Listen to a model event</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/listen-to-a-data-store-event.html">Listen to a data store event</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/send-messages.html">Send messages</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/send-messages-to-other-systems.html">Send messages to other systems</a></li><li class="navListItem navListItemActive"><a class="navItem" href="../../docs/pt-BR/create-an-extension.html">Create an extension</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/generate-a-model-from-a-json-file.html">Generate a model from a JSON file</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/create-a-graph-system.html">Create a Graph system</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Articles</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/articles-about-the-project.html">Articles about the project</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul class=""><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/who-is-behind-system-designer.html">Quem está por trás do System Designer?</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/privacy-policy.html">Privacy Policy</a></li><li class="navListItem"><a class="navItem" href="../../docs/pt-BR/license.html">License</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://crowdin.com/project/system-designer/pt-BR" target="_blank" rel="noreferrer noopener">Translate</a><h1 id="__docusaurus" class="postHeaderTitle">Create an extension</h1></header><article><div><span><p>In this tutorial we will show how to create an extension in System Designer.</p>
+<blockquote>
+<p><strong>What can be done in extension?</strong></p>
+<ul>
+<li>toolbar item creation,</li>
+<li>actions when clicking on them and</li>
+<li>dialog creations.</li>
+</ul>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="create-an-extension"></a><a href="#create-an-extension" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create an extension</h2>
+<ul>
+<li>click on the <strong>import</strong> button on the left toolbar,</li>
+<li>a dialog is shown,</li>
+<li>click on <strong>from the library</strong> radio button,</li>
+<li>select <strong>Create an extension</strong> from the proposed systems,</li>
+</ul>
+<p><img src="../../img/create-an-extension-1.png" alt="Image Alt"></p>
+<ul>
+<li>click on the <strong>Import</strong> button. A system is created,</li>
+<li>click on the system,</li>
+<li>click on <em>Description</em> tab, remove all the text and type <strong>My first extension</strong>,</li>
+</ul>
+<p><img src="../../img/create-an-extension-2.png" alt="Image Alt"></p>
+<ul>
+<li>save,</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="create-a-toolbar-item"></a><a href="#create-a-toolbar-item" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a toolbar item</h2>
+<ul>
+<li>Click on <em>Components</em> tab and select <em>ToolbarItem</em>,</li>
+</ul>
+<p><img src="../../img/create-an-extension-3.png" alt="Image Alt"></p>
+<ul>
+<li>A toolbar item is already there in the system example. Click on <em>toolbar-item-template.html</em> link (next to html property),</li>
+<li>You navigate to the <em>HTML</em> components and you can see the template used for showing the toolbar,</li>
+</ul>
+<p><img src="../../img/create-an-extension-4.png" alt="Image Alt"></p>
+<ul>
+<li>Click on it if you wan edit the html of the toolbar item,</li>
+</ul>
+<p><img src="../../img/create-an-extension-5.png" alt="Image Alt"></p>
+<h2><a class="anchor" aria-hidden="true" id="create-an-action-when-clicking-on-the-toolbar-item"></a><a href="#create-an-action-when-clicking-on-the-toolbar-item" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create an action when clicking on the toolbar item</h2>
+<ul>
+<li>click on <em>Behaviors</em> tab,</li>
+<li>click on <em>ToolbarItem</em> on the right,</li>
+<li>and then click <em>toolbar-item-template</em> on the right,</li>
+</ul>
+<p><img src="../../img/create-an-extension-6.png" alt="Image Alt"></p>
+<ul>
+<li>a list of behaviors is shown, and you can see that a <em>click</em> behavior exist,</li>
+<li>click on it to edit it and update the code,</li>
+</ul>
+<p><img src="../../img/create-an-extension-7.png" alt="Image Alt"></p>
+<h2><a class="anchor" aria-hidden="true" id="test-your-extension"></a><a href="#test-your-extension" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Test your extension</h2>
+<p>To test your extension, it is very easy. You just have to click on the run button and your extension will be installed in System Designer.</p>
+<p><img src="../../img/create-an-extension-8.png" alt="Image Alt"></p>
+<p>Then click on the new icon that is on the toolbar to see the dialog of your extension:</p>
+<p><img src="../../img/create-an-extension-9.png" alt="Image Alt"></p>
+<h2><a class="anchor" aria-hidden="true" id="debug-your-extension-on-macos-windows-or-linux"></a><a href="#debug-your-extension-on-macos-windows-or-linux" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Debug your extension on macOS, Windows or Linux</h2>
+<ul>
+<li>go to the menu,</li>
+<li>click on <strong>Menu &gt; Toggle Developper Tools</strong>.</li>
+</ul>
+<p>The <a href="https://developers.google.com/web/tools/chrome-devtools/">Chrome Dev Tools</a> is opened and you can debug your extension.</p>
+<p><img src="../../img/create-an-extension-10.png" alt="Image Alt"></p>
+<h2><a class="anchor" aria-hidden="true" id="add-your-extension"></a><a href="#add-your-extension" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add your extension</h2>
+<ul>
+<li>click on the <em>extension manager</em> button on the left toolbar,</li>
+<li>a dialog is shown,</li>
+<li>near <em>From your systems</em> click on your extension,</li>
+<li>click on the <em>Add</em> button,</li>
+</ul>
+<p><img src="../../img/create-an-extension-11.png" alt="Image Alt"></p>
+<ul>
+<li>your extension is then been added into System Designer. You will be able to remove it from the same dialog.</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="../../docs/pt-BR/send-messages-to-other-systems.html"><span class="arrow-prev">← </span><span>Send messages to other systems</span></a><a class="docs-next button" href="../../docs/pt-BR/generate-a-model-from-a-json-file.html"><span>Generate a model from a JSON file</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-an-extension">Create an extension</a></li><li><a href="#create-a-toolbar-item">Create a toolbar item</a></li><li><a href="#create-an-action-when-clicking-on-the-toolbar-item">Create an action when clicking on the toolbar item</a></li><li><a href="#test-your-extension">Test your extension</a></li><li><a href="#debug-your-extension-on-macos-windows-or-linux">Debug your extension on macOS, Windows or Linux</a></li><li><a href="#add-your-extension">Add your extension</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">System Designer is distributed under Apache License 2.0 - Copyright © 2024 Erwan Carriou</section></footer></div></body></html>
